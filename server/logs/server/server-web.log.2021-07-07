@@ -1,0 +1,862 @@
+2021-07-04 15:09:28,843 ERROR 11936 [-/127.0.0.1/-/5ms POST /v1/login] nodejs.TypeError: Cannot read property 'toUpperCase' of undefined
+    at UserController.login (E:\前端学习\项目\vue-h5shopping\server\app\controller\api\user.js:74:60)
+    at Object.callFn (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-core@4.20.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-core@4.20.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\前端学习\项目\vue-h5shopping\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\前端学习\项目\vue-h5shopping\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\前端学习\项目\vue-h5shopping\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\前端学习\项目\vue-h5shopping\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\前端学习\项目\vue-h5shopping\server\app\middleware\isLogin.js:7:23
+    at dispatch (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 11936
+hostname: WINDOWS-9MNNE6M
+
+2021-07-04 15:09:47,018 ERROR 11936 [-/127.0.0.1/-/1ms POST /v1/login] nodejs.TypeError: Cannot read property 'toUpperCase' of undefined
+    at UserController.login (E:\前端学习\项目\vue-h5shopping\server\app\controller\api\user.js:74:60)
+    at Object.callFn (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-core@4.20.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-core@4.20.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\前端学习\项目\vue-h5shopping\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\前端学习\项目\vue-h5shopping\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\前端学习\项目\vue-h5shopping\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\前端学习\项目\vue-h5shopping\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\前端学习\项目\vue-h5shopping\server\app\middleware\isLogin.js:7:23
+    at dispatch (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 11936
+hostname: WINDOWS-9MNNE6M
+
+2021-07-05 14:50:03,033 ERROR 5332 [-/127.0.0.1/-/2ms POST /v1/collection] nodejs.TypeError: Cannot read property 'id' of null
+    at OperatingGoodsController.collection (E:\前端学习\项目\vue-h5shopping\server\app\controller\api\operatingGoods.js:16:24)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\app\middleware\isLogin.js:15:13
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-session@6.2.0@koa-session\index.js:41:7)
+    at async bodyParser (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-bodyparser@4.3.0@koa-bodyparser\index.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-static-cache@5.1.4@koa-static-cache\index.js:39:63
+    at async notfound (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
+
+pid: 5332
+hostname: WINDOWS-9MNNE6M
+
+2021-07-05 14:50:47,700 ERROR 5332 [-/127.0.0.1/-/2ms POST /v1/collection] nodejs.TypeError: Cannot read property 'id' of null
+    at OperatingGoodsController.collection (E:\前端学习\项目\vue-h5shopping\server\app\controller\api\operatingGoods.js:16:24)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\app\middleware\isLogin.js:15:13
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-session@6.2.0@koa-session\index.js:41:7)
+    at async bodyParser (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-bodyparser@4.3.0@koa-bodyparser\index.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-static-cache@5.1.4@koa-static-cache\index.js:39:63
+    at async notfound (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
+
+pid: 5332
+hostname: WINDOWS-9MNNE6M
+
+2021-07-05 14:59:20,646 ERROR 5332 [-/127.0.0.1/-/2ms POST /v1/collection] nodejs.TypeError: Cannot read property 'id' of null
+    at OperatingGoodsController.collection (E:\前端学习\项目\vue-h5shopping\server\app\controller\api\operatingGoods.js:16:24)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\app\middleware\isLogin.js:15:13
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-session@6.2.0@koa-session\index.js:41:7)
+    at async bodyParser (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-bodyparser@4.3.0@koa-bodyparser\index.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-static-cache@5.1.4@koa-static-cache\index.js:39:63
+    at async notfound (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
+
+pid: 5332
+hostname: WINDOWS-9MNNE6M
+
+2021-07-05 15:00:15,521 ERROR 5332 [-/127.0.0.1/-/3ms POST /v1/collection] nodejs.TypeError: Cannot read property 'id' of null
+    at OperatingGoodsController.collection (E:\前端学习\项目\vue-h5shopping\server\app\controller\api\operatingGoods.js:16:24)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\app\middleware\isLogin.js:15:13
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-session@6.2.0@koa-session\index.js:41:7)
+    at async bodyParser (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-bodyparser@4.3.0@koa-bodyparser\index.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-static-cache@5.1.4@koa-static-cache\index.js:39:63
+    at async notfound (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
+
+pid: 5332
+hostname: WINDOWS-9MNNE6M
+
+2021-07-05 15:00:30,776 ERROR 5332 [-/127.0.0.1/-/1ms POST /v1/collection] nodejs.TypeError: Cannot read property 'id' of null
+    at OperatingGoodsController.collection (E:\前端学习\项目\vue-h5shopping\server\app\controller\api\operatingGoods.js:16:24)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\app\middleware\isLogin.js:15:13
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-session@6.2.0@koa-session\index.js:41:7)
+    at async bodyParser (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-bodyparser@4.3.0@koa-bodyparser\index.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-static-cache@5.1.4@koa-static-cache\index.js:39:63
+    at async notfound (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
+
+pid: 5332
+hostname: WINDOWS-9MNNE6M
+
+2021-07-05 15:01:53,307 ERROR 5332 [-/127.0.0.1/-/1ms POST /v1/collection] nodejs.TypeError: Cannot read property 'id' of null
+    at OperatingGoodsController.collection (E:\前端学习\项目\vue-h5shopping\server\app\controller\api\operatingGoods.js:16:24)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\app\middleware\isLogin.js:15:13
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-session@6.2.0@koa-session\index.js:41:7)
+    at async bodyParser (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-bodyparser@4.3.0@koa-bodyparser\index.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-static-cache@5.1.4@koa-static-cache\index.js:39:63
+    at async notfound (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
+
+pid: 5332
+hostname: WINDOWS-9MNNE6M
+
+2021-07-05 15:02:43,515 ERROR 5332 [-/127.0.0.1/-/1ms POST /v1/collection] nodejs.TypeError: Cannot read property 'id' of null
+    at OperatingGoodsController.collection (E:\前端学习\项目\vue-h5shopping\server\app\controller\api\operatingGoods.js:16:24)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\app\middleware\isLogin.js:15:13
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-session@6.2.0@koa-session\index.js:41:7)
+    at async bodyParser (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-bodyparser@4.3.0@koa-bodyparser\index.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-static-cache@5.1.4@koa-static-cache\index.js:39:63
+    at async notfound (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
+
+pid: 5332
+hostname: WINDOWS-9MNNE6M
+
+2021-07-05 15:03:14,493 ERROR 5332 [-/127.0.0.1/-/2ms POST /v1/collection] nodejs.TypeError: Cannot read property 'id' of null
+    at OperatingGoodsController.collection (E:\前端学习\项目\vue-h5shopping\server\app\controller\api\operatingGoods.js:16:24)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\app\middleware\isLogin.js:15:13
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-session@6.2.0@koa-session\index.js:41:7)
+    at async bodyParser (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-bodyparser@4.3.0@koa-bodyparser\index.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-static-cache@5.1.4@koa-static-cache\index.js:39:63
+    at async notfound (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
+
+pid: 5332
+hostname: WINDOWS-9MNNE6M
+
+2021-07-05 15:03:33,916 ERROR 5332 [-/127.0.0.1/-/2ms POST /v1/collection] nodejs.TypeError: Cannot read property 'id' of null
+    at OperatingGoodsController.collection (E:\前端学习\项目\vue-h5shopping\server\app\controller\api\operatingGoods.js:16:24)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\app\middleware\isLogin.js:15:13
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-session@6.2.0@koa-session\index.js:41:7)
+    at async bodyParser (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-bodyparser@4.3.0@koa-bodyparser\index.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-static-cache@5.1.4@koa-static-cache\index.js:39:63
+    at async notfound (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
+
+pid: 5332
+hostname: WINDOWS-9MNNE6M
+
+2021-07-05 15:04:57,658 ERROR 5332 [-/127.0.0.1/-/1ms POST /v1/collection] nodejs.TypeError: Cannot read property 'id' of null
+    at OperatingGoodsController.collection (E:\前端学习\项目\vue-h5shopping\server\app\controller\api\operatingGoods.js:16:24)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\app\middleware\isLogin.js:15:13
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-session@6.2.0@koa-session\index.js:41:7)
+    at async bodyParser (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-bodyparser@4.3.0@koa-bodyparser\index.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-static-cache@5.1.4@koa-static-cache\index.js:39:63
+    at async notfound (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
+
+pid: 5332
+hostname: WINDOWS-9MNNE6M
+
+2021-07-05 21:23:21,206 ERROR 13324 [-/127.0.0.1/-/2ms POST /v1/collection] nodejs.TypeError: Cannot read property 'id' of null
+    at OperatingGoodsController.collection (E:\前端学习\项目\vue-h5shopping\server\app\controller\api\operatingGoods.js:16:24)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\app\middleware\isLogin.js:15:13
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-session@6.2.0@koa-session\index.js:41:7)
+    at async bodyParser (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-bodyparser@4.3.0@koa-bodyparser\index.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-static-cache@5.1.4@koa-static-cache\index.js:39:63
+    at async notfound (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
+
+pid: 13324
+hostname: WINDOWS-9MNNE6M
+
+2021-07-05 21:23:22,039 ERROR 13324 [-/127.0.0.1/-/2ms POST /v1/collection] nodejs.TypeError: Cannot read property 'id' of null
+    at OperatingGoodsController.collection (E:\前端学习\项目\vue-h5shopping\server\app\controller\api\operatingGoods.js:16:24)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\app\middleware\isLogin.js:15:13
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-session@6.2.0@koa-session\index.js:41:7)
+    at async bodyParser (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-bodyparser@4.3.0@koa-bodyparser\index.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-static-cache@5.1.4@koa-static-cache\index.js:39:63
+    at async notfound (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
+
+pid: 13324
+hostname: WINDOWS-9MNNE6M
+
+2021-07-05 21:23:54,537 ERROR 13324 [-/127.0.0.1/-/3ms POST /v1/collection] nodejs.TypeError: Cannot read property 'id' of null
+    at OperatingGoodsController.collection (E:\前端学习\项目\vue-h5shopping\server\app\controller\api\operatingGoods.js:16:24)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\app\middleware\isLogin.js:15:13
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-session@6.2.0@koa-session\index.js:41:7)
+    at async bodyParser (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-bodyparser@4.3.0@koa-bodyparser\index.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-static-cache@5.1.4@koa-static-cache\index.js:39:63
+    at async notfound (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
+
+pid: 13324
+hostname: WINDOWS-9MNNE6M
+
+2021-07-05 21:25:39,189 ERROR 13324 [-/127.0.0.1/-/2ms POST /v1/collection] nodejs.TypeError: Cannot read property 'id' of null
+    at OperatingGoodsController.collection (E:\前端学习\项目\vue-h5shopping\server\app\controller\api\operatingGoods.js:16:24)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\app\middleware\isLogin.js:15:13
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-session@6.2.0@koa-session\index.js:41:7)
+    at async bodyParser (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-bodyparser@4.3.0@koa-bodyparser\index.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-static-cache@5.1.4@koa-static-cache\index.js:39:63
+    at async notfound (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
+
+pid: 13324
+hostname: WINDOWS-9MNNE6M
+
+2021-07-06 14:30:41,143 ERROR 7128 [-/127.0.0.1/-/8ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{}" (type Object) at path "cid" for model "ShopList"
+    at model.Query.exec (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+messageFormat: undefined
+stringValue: "\"{}\""
+kind: "string"
+value: {}
+path: "cid"
+reason: null
+valueType: "Object"
+pid: 7128
+hostname: WINDOWS-9MNNE6M
+
+2021-07-06 14:31:08,864 ERROR 7128 [-/127.0.0.1/-/2ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{}" (type Object) at path "cid" for model "ShopList"
+    at model.Query.exec (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+messageFormat: undefined
+stringValue: "\"{}\""
+kind: "string"
+value: {}
+path: "cid"
+reason: null
+valueType: "Object"
+pid: 7128
+hostname: WINDOWS-9MNNE6M
+
+2021-07-06 14:32:09,173 ERROR 7128 [-/127.0.0.1/-/1ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{}" (type Object) at path "cid" for model "ShopList"
+    at model.Query.exec (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+messageFormat: undefined
+stringValue: "\"{}\""
+kind: "string"
+value: {}
+path: "cid"
+reason: null
+valueType: "Object"
+pid: 7128
+hostname: WINDOWS-9MNNE6M
+
+2021-07-06 14:32:21,055 ERROR 7128 [-/127.0.0.1/-/2ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{ cid: '238bc2e023844769a6b67d9a4c04b2ea' }" (type Object) at path "cid" for model "ShopList"
+    at model.Query.exec (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+messageFormat: undefined
+stringValue: "\"{ cid: '238bc2e023844769a6b67d9a4c04b2ea' }\""
+kind: "string"
+value: {"cid":"238bc2e023844769a6b67d9a4c04b2ea"}
+path: "cid"
+reason: null
+valueType: "Object"
+pid: 7128
+hostname: WINDOWS-9MNNE6M
+
+2021-07-06 14:33:06,093 ERROR 7128 [-/127.0.0.1/-/2ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{
+  cid: [
+    {
+      add_time: 1625531029814,
+      check: true,
+      count: 10,
+      _id: '60e3a2958740e7101c6e77c1',
+      uid: '60e15ee7d50bcc2ea0d196a3',
+      present_price: 16.8,
+      cid: '238bc2e023844769a6b67d9a4c04b2ea',
+      image_path: 'http://images.baixingliangfan.cn/compressedPic/20180411083404_6619.jpg',
+      name: '纳美小苏打源生护龈牙膏3010/支',
+      mallPrice: 16.8,
+      __v: 0
+    }
+  ]
+}" (type Object) at path "cid" for model "ShopList"
+  cid: [
+    {
+      add_time: 1625531029814,
+      check: true,
+      count: 10,
+      _id: '60e3a2958740e7101c6e77c1',
+      uid: '60e15ee7d50bcc2ea0d196a3',
+      present_price: 16.8,
+      cid: '238bc2e023844769a6b67d9a4c04b2ea',
+      image_path: 'http://images.baixingliangfan.cn/compressedPic/20180411083404_6619.jpg',
+      name: '纳美小苏打源生护龈牙膏3010/支',
+      mallPrice: 16.8,
+      __v: 0
+    }
+  ]
+}" (type Object) at path "cid" for model "ShopList"
+    at model.Query.exec (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+messageFormat: undefined
+stringValue: "\"{\n  cid: [\n    {\n      add_time: 1625531029814,\n      check: true,\n      count: 10,\n      _id: '60e3a2958740e7101c6e77c1',\n      uid: '60e15ee7d50bcc2ea0d196a3',\n      present_price: 16.8,\n      cid: '238bc2e023844769a6b67d9a4c04b2ea',\n      image_path: 'http://images.baixingliangfan.cn/compressedPic/20180411083404_6619.jpg',\n      name: '纳美小苏打源生护龈牙膏3010/支',\n      mallPrice: 16.8,\n      __v: 0\n    }\n  ]\n}\""
+kind: "string"
+value: {"cid":[{"add_time":1625531029814,"check":true,"count":10,"_id":"60e3a2958740e7101c6e77c1","uid":"60e15ee7d50bcc2ea0d196a3","present_price":16.8,"cid":"238bc2e023844769a6b67d9a4c04b2ea","image_path":"http://images.baixingliangfan.cn/compressedPic/20180411083404_6619.jpg","name":"纳美小苏打源生护龈牙膏3010/支","mallPrice":16.8,"__v":0}]}
+path: "cid"
+reason: null
+valueType: "Object"
+pid: 7128
+hostname: WINDOWS-9MNNE6M
+
+2021-07-06 14:33:39,769 ERROR 7128 [-/127.0.0.1/-/1ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{
+  cid: [
+    {
+      add_time: 1625531029814,
+      check: true,
+      count: 10,
+      _id: '60e3a2958740e7101c6e77c1',
+      uid: '60e15ee7d50bcc2ea0d196a3',
+      present_price: 16.8,
+      cid: '238bc2e023844769a6b67d9a4c04b2ea',
+      image_path: 'http://images.baixingliangfan.cn/compressedPic/20180411083404_6619.jpg',
+      name: '纳美小苏打源生护龈牙膏3010/支',
+      mallPrice: 16.8,
+      __v: 0
+    }
+  ]
+}" (type Object) at path "cid" for model "ShopList"
+  cid: [
+    {
+      add_time: 1625531029814,
+      check: true,
+      count: 10,
+      _id: '60e3a2958740e7101c6e77c1',
+      uid: '60e15ee7d50bcc2ea0d196a3',
+      present_price: 16.8,
+      cid: '238bc2e023844769a6b67d9a4c04b2ea',
+      image_path: 'http://images.baixingliangfan.cn/compressedPic/20180411083404_6619.jpg',
+      name: '纳美小苏打源生护龈牙膏3010/支',
+      mallPrice: 16.8,
+      __v: 0
+    }
+  ]
+}" (type Object) at path "cid" for model "ShopList"
+    at model.Query.exec (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+messageFormat: undefined
+stringValue: "\"{\n  cid: [\n    {\n      add_time: 1625531029814,\n      check: true,\n      count: 10,\n      _id: '60e3a2958740e7101c6e77c1',\n      uid: '60e15ee7d50bcc2ea0d196a3',\n      present_price: 16.8,\n      cid: '238bc2e023844769a6b67d9a4c04b2ea',\n      image_path: 'http://images.baixingliangfan.cn/compressedPic/20180411083404_6619.jpg',\n      name: '纳美小苏打源生护龈牙膏3010/支',\n      mallPrice: 16.8,\n      __v: 0\n    }\n  ]\n}\""
+kind: "string"
+value: {"cid":[{"add_time":1625531029814,"check":true,"count":10,"_id":"60e3a2958740e7101c6e77c1","uid":"60e15ee7d50bcc2ea0d196a3","present_price":16.8,"cid":"238bc2e023844769a6b67d9a4c04b2ea","image_path":"http://images.baixingliangfan.cn/compressedPic/20180411083404_6619.jpg","name":"纳美小苏打源生护龈牙膏3010/支","mallPrice":16.8,"__v":0}]}
+path: "cid"
+reason: null
+valueType: "Object"
+pid: 7128
+hostname: WINDOWS-9MNNE6M
+
+2021-07-06 14:34:07,734 ERROR 7128 [-/127.0.0.1/-/2ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{
+  cid: [
+    {
+      add_time: 1625531029814,
+      check: true,
+      count: 10,
+      _id: '60e3a2958740e7101c6e77c1',
+      uid: '60e15ee7d50bcc2ea0d196a3',
+      present_price: 16.8,
+      cid: '238bc2e023844769a6b67d9a4c04b2ea',
+      image_path: 'http://images.baixingliangfan.cn/compressedPic/20180411083404_6619.jpg',
+      name: '纳美小苏打源生护龈牙膏3010/支',
+      mallPrice: 16.8,
+      __v: 0
+    }
+  ]
+}" (type Object) at path "cid" for model "ShopList"
+  cid: [
+    {
+      add_time: 1625531029814,
+      check: true,
+      count: 10,
+      _id: '60e3a2958740e7101c6e77c1',
+      uid: '60e15ee7d50bcc2ea0d196a3',
+      present_price: 16.8,
+      cid: '238bc2e023844769a6b67d9a4c04b2ea',
+      image_path: 'http://images.baixingliangfan.cn/compressedPic/20180411083404_6619.jpg',
+      name: '纳美小苏打源生护龈牙膏3010/支',
+      mallPrice: 16.8,
+      __v: 0
+    }
+  ]
+}" (type Object) at path "cid" for model "ShopList"
+    at model.Query.exec (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+messageFormat: undefined
+stringValue: "\"{\n  cid: [\n    {\n      add_time: 1625531029814,\n      check: true,\n      count: 10,\n      _id: '60e3a2958740e7101c6e77c1',\n      uid: '60e15ee7d50bcc2ea0d196a3',\n      present_price: 16.8,\n      cid: '238bc2e023844769a6b67d9a4c04b2ea',\n      image_path: 'http://images.baixingliangfan.cn/compressedPic/20180411083404_6619.jpg',\n      name: '纳美小苏打源生护龈牙膏3010/支',\n      mallPrice: 16.8,\n      __v: 0\n    }\n  ]\n}\""
+kind: "string"
+value: {"cid":[{"add_time":1625531029814,"check":true,"count":10,"_id":"60e3a2958740e7101c6e77c1","uid":"60e15ee7d50bcc2ea0d196a3","present_price":16.8,"cid":"238bc2e023844769a6b67d9a4c04b2ea","image_path":"http://images.baixingliangfan.cn/compressedPic/20180411083404_6619.jpg","name":"纳美小苏打源生护龈牙膏3010/支","mallPrice":16.8,"__v":0}]}
+path: "cid"
+reason: null
+valueType: "Object"
+pid: 7128
+hostname: WINDOWS-9MNNE6M
+
+2021-07-06 14:58:20,473 ERROR 3848 [-/127.0.0.1/-/5ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{ cid: [ '238bc2e023844769a6b67d9a4c04b2ea' ] }" (type Object) at path "cid" for model "ShopList"
+    at model.Query.exec (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+messageFormat: undefined
+stringValue: "\"{ cid: [ '238bc2e023844769a6b67d9a4c04b2ea' ] }\""
+kind: "string"
+value: {"cid":["238bc2e023844769a6b67d9a4c04b2ea"]}
+path: "cid"
+reason: null
+valueType: "Object"
+pid: 3848
+hostname: WINDOWS-9MNNE6M
+
+2021-07-06 14:58:35,210 ERROR 3848 [-/127.0.0.1/-/2ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{
+  cid: [
+    '238bc2e023844769a6b67d9a4c04b2ea',
+    'c7cb656294ea48d3b224ddee5fdd9647'
+  ]
+}" (type Object) at path "cid" for model "ShopList"
+  cid: [
+    '238bc2e023844769a6b67d9a4c04b2ea',
+    'c7cb656294ea48d3b224ddee5fdd9647'
+  ]
+}" (type Object) at path "cid" for model "ShopList"
+    at model.Query.exec (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+messageFormat: undefined
+stringValue: "\"{\n  cid: [\n    '238bc2e023844769a6b67d9a4c04b2ea',\n    'c7cb656294ea48d3b224ddee5fdd9647'\n  ]\n}\""
+kind: "string"
+value: {"cid":["238bc2e023844769a6b67d9a4c04b2ea","c7cb656294ea48d3b224ddee5fdd9647"]}
+path: "cid"
+reason: null
+valueType: "Object"
+pid: 3848
+hostname: WINDOWS-9MNNE6M
+
+2021-07-06 14:59:51,283 ERROR 3848 [-/127.0.0.1/-/3ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{
+  cid: {
+    add_time: 1625531029814,
+    check: true,
+    count: 5,
+    _id: '60e3a2958740e7101c6e77c1',
+    uid: '60e15ee7d50bcc2ea0d196a3',
+    present_price: 16.8,
+    cid: '238bc2e023844769a6b67d9a4c04b2ea',
+    image_path: 'http://images.baixingliangfan.cn/compressedPic/20180411083404_6619.jpg',
+    name: '纳美小苏打源生护龈牙膏3010/支',
+    mallPrice: 16.8,
+    __v: 0
+  }
+}" (type Object) at path "cid" for model "ShopList"
+  cid: {
+    add_time: 1625531029814,
+    check: true,
+    count: 5,
+    _id: '60e3a2958740e7101c6e77c1',
+    uid: '60e15ee7d50bcc2ea0d196a3',
+    present_price: 16.8,
+    cid: '238bc2e023844769a6b67d9a4c04b2ea',
+    image_path: 'http://images.baixingliangfan.cn/compressedPic/20180411083404_6619.jpg',
+    name: '纳美小苏打源生护龈牙膏3010/支',
+    mallPrice: 16.8,
+    __v: 0
+  }
+}" (type Object) at path "cid" for model "ShopList"
+    at model.Query.exec (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+messageFormat: undefined
+stringValue: "\"{\n  cid: {\n    add_time: 1625531029814,\n    check: true,\n    count: 5,\n    _id: '60e3a2958740e7101c6e77c1',\n    uid: '60e15ee7d50bcc2ea0d196a3',\n    present_price: 16.8,\n    cid: '238bc2e023844769a6b67d9a4c04b2ea',\n    image_path: 'http://images.baixingliangfan.cn/compressedPic/20180411083404_6619.jpg',\n    name: '纳美小苏打源生护龈牙膏3010/支',\n    mallPrice: 16.8,\n    __v: 0\n  }\n}\""
+kind: "string"
+value: {"cid":{"add_time":1625531029814,"check":true,"count":5,"_id":"60e3a2958740e7101c6e77c1","uid":"60e15ee7d50bcc2ea0d196a3","present_price":16.8,"cid":"238bc2e023844769a6b67d9a4c04b2ea","image_path":"http://images.baixingliangfan.cn/compressedPic/20180411083404_6619.jpg","name":"纳美小苏打源生护龈牙膏3010/支","mallPrice":16.8,"__v":0}}
+path: "cid"
+reason: null
+valueType: "Object"
+pid: 3848
+hostname: WINDOWS-9MNNE6M
+
+2021-07-06 16:11:45,135 ERROR 1424 [-/127.0.0.1/-/11ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{ cid: [ '238bc2e023844769a6b67d9a4c04b2ea' ] }" (type Object) at path "cid" for model "ShopList"
+    at model.Query.exec (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+messageFormat: undefined
+stringValue: "\"{ cid: [ '238bc2e023844769a6b67d9a4c04b2ea' ] }\""
+kind: "string"
+value: {"cid":["238bc2e023844769a6b67d9a4c04b2ea"]}
+path: "cid"
+reason: null
+valueType: "Object"
+pid: 1424
+hostname: WINDOWS-9MNNE6M
+
+2021-07-06 16:12:31,254 ERROR 1424 [-/127.0.0.1/-/2ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{ cid: [ '60e3a2958740e7101c6e77c1' ] }" (type Object) at path "cid" for model "ShopList"
+    at model.Query.exec (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+messageFormat: undefined
+stringValue: "\"{ cid: [ '60e3a2958740e7101c6e77c1' ] }\""
+kind: "string"
+value: {"cid":["60e3a2958740e7101c6e77c1"]}
+path: "cid"
+reason: null
+valueType: "Object"
+pid: 1424
+hostname: WINDOWS-9MNNE6M
+
+2021-07-06 16:12:51,356 ERROR 1424 [-/127.0.0.1/-/1ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{ cid: [ '60e15ee7d50bcc2ea0d196a3' ] }" (type Object) at path "cid" for model "ShopList"
+    at model.Query.exec (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+messageFormat: undefined
+stringValue: "\"{ cid: [ '60e15ee7d50bcc2ea0d196a3' ] }\""
+kind: "string"
+value: {"cid":["60e15ee7d50bcc2ea0d196a3"]}
+path: "cid"
+reason: null
+valueType: "Object"
+pid: 1424
+hostname: WINDOWS-9MNNE6M
+
+2021-07-06 16:13:17,657 ERROR 1424 [-/127.0.0.1/-/2ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{ cid: [ '238bc2e023844769a6b67d9a4c04b2ea' ] }" (type Object) at path "cid" for model "ShopList"
+    at model.Query.exec (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+messageFormat: undefined
+stringValue: "\"{ cid: [ '238bc2e023844769a6b67d9a4c04b2ea' ] }\""
+kind: "string"
+value: {"cid":["238bc2e023844769a6b67d9a4c04b2ea"]}
+path: "cid"
+reason: null
+valueType: "Object"
+pid: 1424
+hostname: WINDOWS-9MNNE6M
+
+2021-07-06 16:14:17,001 ERROR 1424 [-/127.0.0.1/-/1ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{ cid: [ '238bc2e023844769a6b67d9a4c04b2ea' ] }" (type Object) at path "cid" for model "ShopList"
+    at model.Query.exec (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+messageFormat: undefined
+stringValue: "\"{ cid: [ '238bc2e023844769a6b67d9a4c04b2ea' ] }\""
+kind: "string"
+value: {"cid":["238bc2e023844769a6b67d9a4c04b2ea"]}
+path: "cid"
+reason: null
+valueType: "Object"
+pid: 1424
+hostname: WINDOWS-9MNNE6M
+
+2021-07-06 16:17:17,049 ERROR 1424 [-/127.0.0.1/-/1ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{ cid: [ '238bc2e023844769a6b67d9a4c04b2ea' ] }" (type Object) at path "cid" for model "ShopList"
+    at model.Query.exec (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+messageFormat: undefined
+stringValue: "\"{ cid: [ '238bc2e023844769a6b67d9a4c04b2ea' ] }\""
+kind: "string"
+value: {"cid":["238bc2e023844769a6b67d9a4c04b2ea"]}
+path: "cid"
+reason: null
+valueType: "Object"
+pid: 1424
+hostname: WINDOWS-9MNNE6M
+
+2021-07-06 16:18:30,321 ERROR 1424 [-/127.0.0.1/-/2ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{
+  cid: [
+    {
+      add_time: 1625531029814,
+      check: true,
+      count: 5,
+      _id: '60e3a2958740e7101c6e77c1',
+      uid: '60e15ee7d50bcc2ea0d196a3',
+      present_price: 16.8,
+      cid: '238bc2e023844769a6b67d9a4c04b2ea',
+      image_path: 'http://images.baixingliangfan.cn/compressedPic/20180411083404_6619.jpg',
+      name: '纳美小苏打源生护龈牙膏3010/支',
+      mallPrice: 16.8,
+      __v: 0
+    }
+  ]
+}" (type Object) at path "cid" for model "ShopList"
+  cid: [
+    {
+      add_time: 1625531029814,
+      check: true,
+      count: 5,
+      _id: '60e3a2958740e7101c6e77c1',
+      uid: '60e15ee7d50bcc2ea0d196a3',
+      present_price: 16.8,
+      cid: '238bc2e023844769a6b67d9a4c04b2ea',
+      image_path: 'http://images.baixingliangfan.cn/compressedPic/20180411083404_6619.jpg',
+      name: '纳美小苏打源生护龈牙膏3010/支',
+      mallPrice: 16.8,
+      __v: 0
+    }
+  ]
+}" (type Object) at path "cid" for model "ShopList"
+    at model.Query.exec (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+messageFormat: undefined
+stringValue: "\"{\n  cid: [\n    {\n      add_time: 1625531029814,\n      check: true,\n      count: 5,\n      _id: '60e3a2958740e7101c6e77c1',\n      uid: '60e15ee7d50bcc2ea0d196a3',\n      present_price: 16.8,\n      cid: '238bc2e023844769a6b67d9a4c04b2ea',\n      image_path: 'http://images.baixingliangfan.cn/compressedPic/20180411083404_6619.jpg',\n      name: '纳美小苏打源生护龈牙膏3010/支',\n      mallPrice: 16.8,\n      __v: 0\n    }\n  ]\n}\""
+kind: "string"
+value: {"cid":[{"add_time":1625531029814,"check":true,"count":5,"_id":"60e3a2958740e7101c6e77c1","uid":"60e15ee7d50bcc2ea0d196a3","present_price":16.8,"cid":"238bc2e023844769a6b67d9a4c04b2ea","image_path":"http://images.baixingliangfan.cn/compressedPic/20180411083404_6619.jpg","name":"纳美小苏打源生护龈牙膏3010/支","mallPrice":16.8,"__v":0}]}
+path: "cid"
+reason: null
+valueType: "Object"
+pid: 1424
+hostname: WINDOWS-9MNNE6M
+
+2021-07-06 16:19:00,795 ERROR 1424 [-/127.0.0.1/-/1ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{ cid: [ '238bc2e023844769a6b67d9a4c04b2ea' ] }" (type Object) at path "cid" for model "ShopList"
+    at model.Query.exec (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+messageFormat: undefined
+stringValue: "\"{ cid: [ '238bc2e023844769a6b67d9a4c04b2ea' ] }\""
+kind: "string"
+value: {"cid":["238bc2e023844769a6b67d9a4c04b2ea"]}
+path: "cid"
+reason: null
+valueType: "Object"
+pid: 1424
+hostname: WINDOWS-9MNNE6M
+
+2021-07-07 14:24:40,583 ERROR 13712 [-/127.0.0.1/-/15ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (E:\前端学习\项目\vue-h5shopping\server\app\controller\api\operatingGoods.js:197:34)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\app\middleware\isLogin.js:15:13
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-session@6.2.0@koa-session\index.js:41:7)
+    at async bodyParser (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-bodyparser@4.3.0@koa-bodyparser\index.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-static-cache@5.1.4@koa-static-cache\index.js:39:63
+    at async notfound (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
+
+pid: 13712
+hostname: WINDOWS-9MNNE6M
+
+2021-07-07 14:25:08,052 ERROR 13712 [-/127.0.0.1/-/2ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (E:\前端学习\项目\vue-h5shopping\server\app\controller\api\operatingGoods.js:197:34)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\app\middleware\isLogin.js:15:13
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-session@6.2.0@koa-session\index.js:41:7)
+    at async bodyParser (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-bodyparser@4.3.0@koa-bodyparser\index.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-static-cache@5.1.4@koa-static-cache\index.js:39:63
+    at async notfound (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
+
+pid: 13712
+hostname: WINDOWS-9MNNE6M
+
+2021-07-07 14:26:54,675 ERROR 13712 [-/127.0.0.1/-/2ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (E:\前端学习\项目\vue-h5shopping\server\app\controller\api\operatingGoods.js:197:34)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\app\middleware\isLogin.js:15:13
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-session@6.2.0@koa-session\index.js:41:7)
+    at async bodyParser (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-bodyparser@4.3.0@koa-bodyparser\index.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-static-cache@5.1.4@koa-static-cache\index.js:39:63
+    at async notfound (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
+
+pid: 13712
+hostname: WINDOWS-9MNNE6M
+
+2021-07-07 15:06:53,053 ERROR 13712 [-/127.0.0.1/-/2ms POST /v1/order] nodejs.TypeError: Cannot read property 'present_price' of null
+    at OperatingGoodsController.order (E:\前端学习\项目\vue-h5shopping\server\app\controller\api\operatingGoods.js:184:40)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\app\middleware\isLogin.js:15:13
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-session@6.2.0@koa-session\index.js:41:7)
+    at async bodyParser (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-bodyparser@4.3.0@koa-bodyparser\index.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-static-cache@5.1.4@koa-static-cache\index.js:39:63
+    at async notfound (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
+
+pid: 13712
+hostname: WINDOWS-9MNNE6M
+
+2021-07-07 15:07:23,960 ERROR 13712 [-/127.0.0.1/-/3ms POST /v1/order] nodejs.TypeError: Cannot read property 'present_price' of null
+    at OperatingGoodsController.order (E:\前端学习\项目\vue-h5shopping\server\app\controller\api\operatingGoods.js:184:40)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\app\middleware\isLogin.js:15:13
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-session@6.2.0@koa-session\index.js:41:7)
+    at async bodyParser (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-bodyparser@4.3.0@koa-bodyparser\index.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-static-cache@5.1.4@koa-static-cache\index.js:39:63
+    at async notfound (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
+
+pid: 13712
+hostname: WINDOWS-9MNNE6M
+
+2021-07-07 15:08:13,645 ERROR 13712 [-/127.0.0.1/-/2ms POST /v1/order] nodejs.TypeError: Cannot read property 'present_price' of null
+    at OperatingGoodsController.order (E:\前端学习\项目\vue-h5shopping\server\app\controller\api\operatingGoods.js:184:40)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\app\middleware\isLogin.js:15:13
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-development@2.7.0@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-security@2.9.0@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-session@6.2.0@koa-session\index.js:41:7)
+    at async bodyParser (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-bodyparser@4.3.0@koa-bodyparser\index.js:95:5)
+    at async E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-static-cache@5.1.4@koa-static-cache\index.js:39:63
+    at async notfound (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg@2.29.4@egg\app\middleware\meta.js:17:5)
+
+pid: 13712
+hostname: WINDOWS-9MNNE6M
+
+2021-07-07 18:24:37,815 ERROR 12888 [-/127.0.0.1/-/3ms POST /v1/evaluateOne] nodejs.Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (E:\前端学习\项目\vue-h5shopping\server\node_modules\_bson@1.1.6@bson\lib\bson\objectid.js:59:11)
+    at ObjectID [as ObjectId] (E:\前端学习\项目\vue-h5shopping\server\node_modules\_bson@1.1.6@bson\lib\bson\objectid.js:40:43)
+    at UserController.evaluateOne (E:\前端学习\项目\vue-h5shopping\server\app\controller\api\user.js:453:52)
+    at Object.callFn (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-core@4.20.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-core@4.20.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\前端学习\项目\vue-h5shopping\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\前端学习\项目\vue-h5shopping\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\前端学习\项目\vue-h5shopping\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\前端学习\项目\vue-h5shopping\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\前端学习\项目\vue-h5shopping\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 12888
+hostname: WINDOWS-9MNNE6M
+

@@ -1,0 +1,135 @@
+$border-radius6:6px !important;
+$backgroundf:#fff !important;
+
+.hom_dv {
+  .van-search__content {
+    background: $backgroundf;
+    height: 30px;
+    padding-left: 0px !important;
+  }
+
+  .van-search {
+    border-radius: $border-radius6;
+    background: $backgroundf;
+    height: 30px;
+  }
+}
+
+.citys_dv {
+  .van-search__content {
+    border-radius: $border-radius6;
+    background: $backgroundf;
+  }
+
+  .van-search {
+    background: #eee;
+  }
+}
+
+.classify_content_r {
+  .van-tabs__content {
+    padding-bottom: 60px;
+  }
+}
+
+.loginres_btn_dv {
+  .van-button--normal {
+    padding: 0px !important;
+  }
+}
+
+.van-field__button {
+  width: 80px;
+}
+
+.comment_r {
+  .van-rate__item {
+    .van-icon {
+      font-size: 15px !important;
+    }
+  }
+}
+
+.product_detail {
+  .van-button {
+    border-radius: 0px !important;
+  }
+
+  .btn_addcars {
+    border-right: 1px solid #eee;
+  }
+}
+
+.editinfo_dv {
+  .content_r {
+    .van-cell {
+      padding: 0px !important;
+    }
+  }
+}
+
+.carts_dv {
+  .van-stepper--round .van-stepper__plus {
+    background-color: #999 !important;
+  }
+
+  .van-stepper--round .van-stepper__minus {
+    background-color: #999 !important;
+    border-color: #999 !important;
+    color: #ffffff !important;
+  }
+}
+
+.editaddress_vanfield {
+  background: red;
+
+  .van-field__label {
+    width: 120px !important;
+  }
+
+  .van-field__body {
+    position: absolute;
+    right: 30px;
+    top: 0px;
+  }
+}
+
+.pay_submit_van-submit-bar {
+
+  .van-submit-bar__bar,
+  .van-address-list__bottom {
+    padding: 0px !important;
+  }
+
+  .van-button--round {
+    border-radius: 0px !important;
+  }
+}
+
+.comment_center_van_field {
+  padding: 0px !important;
+
+  .van-field__control {
+    background: #f7f8fa;
+    padding: 10px;
+  }
+}
+
+.evaluate_tabs_dv {
+  .van-tabs__wrap {
+    position: absolute;
+    top: -35px !important;
+    justify-content: center;
+    margin-left: 5%;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #ccc;
+  }
+}
+
+.classfiy_dv_van-tab {
+  .van-tabs__wrap {
+    position: fixed !important;
+    top: 39px;
+  }
+}

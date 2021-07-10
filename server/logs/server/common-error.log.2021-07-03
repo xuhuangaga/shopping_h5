@@ -1,0 +1,24 @@
+2021-07-03 06:55:13,805 ERROR 9592 nodejs.ClusterClientNoResponseError: client no response in 22475083ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\前端学习\项目\vue-h5shopping\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 9592
+hostname: WINDOWS-9MNNE6M
+
+2021-07-03 20:23:49,706 ERROR 9592 nodejs.ClusterClientNoResponseError: client no response in 1058522ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\前端学习\项目\vue-h5shopping\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 9592
+hostname: WINDOWS-9MNNE6M
+
+2021-07-03 21:29:38,865 ERROR 9592 nodejs.ClusterClientNoResponseError: client no response in 1407829ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\前端学习\项目\vue-h5shopping\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 9592
+hostname: WINDOWS-9MNNE6M
+

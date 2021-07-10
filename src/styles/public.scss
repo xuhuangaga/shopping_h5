@@ -1,0 +1,41 @@
+// 大部分文字颜色
+.c_home_text {
+  color: #6c6c6c;
+}
+//有中划线的文字  比如原价
+.zhx {
+  color:#999;
+  text-decoration: line-through;
+  margin-left: 5px;
+}
+//楼层文字颜色
+.floor_name {
+  color: red;
+}
+//商品标题
+.pro_name {
+  width: 108px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+//确认 字体颜色
+.sure {
+  color: rgb(67,159,251);
+}
+//下边框颜色#eee
+.border_b {
+  border-bottom: 1px solid #eee;
+}
+//下边框颜色#ccc
+.border_bc {
+  border-bottom: 1px solid #ccc;
+}
+//顶部的组件盒子
+.top_pom_box {
+  background: #fff !important;
+}
+//顶部组件下面的第一个盒子
+.content_box {
+  margin-top: 45px;
+}
