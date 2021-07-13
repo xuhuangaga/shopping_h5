@@ -28,7 +28,7 @@
                 v-model="loading"
                 :finished="finished"
                 finished-text="没有更多了"
-                @load="onLoad1"
+                @load="onLoad"
               >
                 <Yes :alreadyEvaluated="alreadyEvaluated"></Yes>
               </van-list>
@@ -58,7 +58,7 @@ export default {
       loading: false,
       finished: false,
       refreshing: false,
-      page: 1,
+      page: 1
     };
   },
   components: {
@@ -106,31 +106,18 @@ export default {
           console.log(err);
         });
     },
-    //未评价 下拉刷新
+    //下拉刷新
     onLoad() {
-      if (this.page === 1) {
-        this.getNoData()
-      } else {
-        setTimeout(() => {
-          if (this.refreshing) {
-            this.evaluateList = [];
-            this.refreshing = false;
-          }
-          this.getNoData()
-        }, 1000);
+      if (this.refreshing) {
+        this.evaluateList = [];
+        this.alreadyEvaluated = [];
+        this.refreshing = false;
       }
-    },
-    //已评价 下拉刷新
-    onLoad1() {
-       if (this.page === 1) {
-        this.getYesData()
+      if (this.page === 1) {
+        this.active === 0 ? this.getNoData() : this.getYesData();
       } else {
         setTimeout(() => {
-          if (this.refreshing) {
-            this.evaluateList = [];
-            this.refreshing = false;
-          }
-          this.getYesData()
+          this.active === 0 ? this.getNoData() : this.getYesData();
         }, 1000);
       }
     },
@@ -144,7 +131,7 @@ export default {
       // 重新加载数据
       // 将 loading 设置为 true，表示处于加载状态
       this.loading = true;
-      index === 0 ? this.onLoad() : this.onLoad1();
+      this.onLoad();
     }
   },
   mounted() {},
