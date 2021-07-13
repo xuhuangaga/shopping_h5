@@ -113,7 +113,9 @@ export default {
   data() {
     return {
       //未评价的数量
-      evaluate: 0
+      evaluate: 0,
+      //点击的是哪一个订单类型
+      index: 0
     };
   },
   components: {},
@@ -133,11 +135,11 @@ export default {
         });
     },
     //跳转页面
-    goto(url, id) {
+    goto(url) {
       //本页面所有功能都需要登录
       //如果点击收货地址列表  需要存储一个本地数据 标识是从个人中心点击进入的地址列表
-      localStorage.setItem("addresslistItem",1)
-      this.$utils.goto(url, id);
+      localStorage.setItem("addresslistItem", 1);
+      this.$utils.goto(url, this.index);
     },
     //获取未评价信息
     getTobeEvaluated() {
@@ -155,11 +157,11 @@ export default {
     },
     //点击跳转
     checkLoginGoto(item, item1) {
+      this.index = item1;
       this.$utils.checkLogin({
         key: "h5_shopping_user",
         next: this.goto,
-        item: item,
-        item1: item1
+        item: item
       });
     }
   },

@@ -13,13 +13,13 @@ export default {
   //检测用户是否登录
   // key:本地存储用户信息的key
   // next:传入一个函数 下一步的操作
-  // item,item1:next函数需要的参数
-  checkLogin({ key, next, item, item1 }) {
+  // item:next函数需要的参数
+  checkLogin({ key, next, item }) {
     //检测本地有没有用户信息
     let user = localStorage.getItem(key)
     if (user) {
       //已经登录 继续下一步操作
-      next(item, item1)
+      next(item)
     } else {
       //未登录 提示用户是否跳转
       Dialog.confirm({

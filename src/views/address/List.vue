@@ -29,8 +29,7 @@ export default {
       list: []
     };
   },
-  components: {
-  },
+  components: {},
   methods: {
     onEdit(item) {
       localStorage.setItem("addressItem", JSON.stringify(item));
@@ -48,9 +47,16 @@ export default {
           // console.log(res);
           if (res.code === 200) {
             this.list = res.address;
-            this.list.map(item => {
+            //默认的收货地址对象
+            let isDefaultInfo = null;
+            this.list.map((item, index) => {
               this.$set(item, "id", item._id);
               if (item.isDefault) {
+                isDefaultInfo = item;
+                //删除当前的默认收货地址
+                this.list.splice(index, 1);
+                //在头部添加默认的收货地址
+                this.list.unshift(isDefaultInfo);
                 this.chosenAddressId = item._id;
               }
             });
@@ -64,7 +70,7 @@ export default {
     select(item) {
       localStorage.setItem("selectedAddItem", JSON.stringify(item));
       //如果是个人中心点击进入的收货地址列表 就不跳转结算页
-      if (!Number(localStorage.getItem('addresslistItem'))) {
+      if (!Number(localStorage.getItem("addresslistItem"))) {
         this.$utils.goto("/pay");
       }
     }

@@ -28,7 +28,7 @@
                 v-model="loading"
                 :finished="finished"
                 finished-text="没有更多了"
-                @load="onLoad1"
+                @load="onLoad"
               >
                 <Yes :alreadyEvaluated="alreadyEvaluated"></Yes>
               </van-list>
@@ -58,8 +58,7 @@ export default {
       loading: false,
       finished: false,
       refreshing: false,
-      page: 1,
-      count: 0
+      page: 1
     };
   },
   components: {
@@ -67,72 +66,75 @@ export default {
     Yes
   },
   methods: {
-    //未评价
+    //获取未评价的数据
+    getNoData() {
+      this.$api
+        .tobeEvaluated(this.page)
+        .then(res => {
+          // console.log(res.data);
+          if (res.code === 200) {
+            this.evaluateList = this.evaluateList.concat(res.data.list);
+            this.page++;
+            if (this.evaluateList.length >= res.data.count) {
+              this.finished = true;
+            } else {
+              this.loading = false;
+            }
+          }
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    },
+    //获取已评价的数据
+    getYesData() {
+      this.$api
+        .alreadyEvaluated(this.page)
+        .then(res => {
+          // console.log(res);
+          if (res.code === 200) {
+            this.alreadyEvaluated = this.alreadyEvaluated.concat(res.data.list);
+            this.page++;
+            if (this.alreadyEvaluated.length >= res.data.count) {
+              this.finished = true;
+            } else {
+              this.loading = false;
+            }
+          }
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    },
+    //下拉刷新
     onLoad() {
-      setTimeout(() => {
-        if (this.refreshing) {
-          this.evaluateList = [];
-          this.refreshing = false;
-        }
-        this.$api
-          .tobeEvaluated(this.page)
-          .then(res => {
-            // console.log(res.data);
-            if (res.code === 200) {
-              this.count = res.data.count;
-              this.evaluateList = this.evaluateList.concat(res.data.list);
-              this.page++;
-              if (this.evaluateList.length >= this.count) {
-                this.finished = true;
-              } else {
-                this.loading = false;
-              }
-            }
-          })
-          .catch(err => {
-            console.log(err);
-          });
-      }, 1000);
+      if (this.refreshing) {
+        this.evaluateList = [];
+        this.alreadyEvaluated = [];
+        this.refreshing = false;
+      }
+      if (this.page === 1) {
+        this.active === 0 ? this.getNoData() : this.getYesData();
+      } else {
+        setTimeout(() => {
+          this.active === 0 ? this.getNoData() : this.getYesData();
+        }, 1000);
+      }
     },
-    //已评价
-    onLoad1() {
-      setTimeout(() => {
-        if (this.refreshing) {
-          this.alreadyEvaluated = [];
-          this.refreshing = false;
-        }
-        this.$api
-          .alreadyEvaluated(this.page)
-          .then(res => {
-            // console.log(res.data);
-            if (res.code === 200) {
-              this.count = res.data.count;
-              this.alreadyEvaluated = this.alreadyEvaluated.concat(res.data.list);
-              this.page++;
-              if (this.alreadyEvaluated.length >= this.count) {
-                this.finished = true;
-              } else {
-                this.loading = false;
-              }
-            }
-          })
-          .catch(err => {
-            console.log(err);
-          });
-      }, 1000);
-    },
-    change(){
-      this.alreadyEvaluated=[]
-      this.evaluateList=[]
-      this.refreshing=false
-      this.loading=false
-      this.finished=false
-      this.page=1
-      this.count=0
+    change(index) {
+      this.alreadyEvaluated = [];
+      this.evaluateList = [];
+      this.refreshing = false;
+      this.page = 1;
+      // 清空列表数据
+      this.finished = false;
+      // 重新加载数据
+      // 将 loading 设置为 true，表示处于加载状态
+      this.loading = true;
+      this.onLoad();
     }
   },
-  mounted() {
-  },
+  mounted() {},
   computed: {},
   watch: {}
 };

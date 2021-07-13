@@ -59,7 +59,7 @@ export default {
       this.$api
         .myOrder()
         .then(res => {
-          console.log(res);
+          // console.log(res);
           if (res.code === 200) {
             this.list = res.list;
           }

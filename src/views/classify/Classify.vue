@@ -5,8 +5,8 @@
         商品分类
       </template>
     </top>
-    <div class="content flex-a-center p-relative hbfb content_box">
-      <div class="content_l hbfb">
+    <div class="content flex-a-center p-relative hbfb content_box" style="background:black">
+      <div class="content_l">
         <van-sidebar v-model="activeKey" class="p_fixed hbfb" style="background:#f7f8fa;margin-top: -12px;">
           <van-sidebar-item
             :title="item.mallCategoryName"
@@ -16,7 +16,7 @@
           />
         </van-sidebar>
       </div>
-      <div class="content_r classify_content_r p-t10 hbfb">
+      <div class="content_r classify_content_r p-t10">
         <van-tabs v-model="active" @change="onChangeTwo" class="classfiy_dv_van-tab" :ellipsis="false">
           <van-tab
             :title="item.mallSubName"
@@ -139,6 +139,8 @@ export default {
   .content_r {
     position: absolute;
     top: 0px;
+    height: 100vh;
+    background: #fff;
   }
   .content_l {
     width: 25%;

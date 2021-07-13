@@ -151,8 +151,10 @@ export default {
     return http.get('/myOrder')
   },
   // 查询已评价
-  alreadyEvaluated() {
-    return http.get('/alreadyEvaluated')
+  alreadyEvaluated(page = 1) {
+    return http.get('/alreadyEvaluated',{
+      params: { page }
+    })
   },
   // 查询未评价
   tobeEvaluated(page = 1) {

@@ -38,8 +38,7 @@ export default {
       list: []
     };
   },
-  components: {
-  },
+  components: {},
   methods: {
     getData() {
       this.list = this.$utils.getHistory("collection");
@@ -50,8 +49,18 @@ export default {
     },
     //删除收藏
     del(id) {
-      this.$utils.removeHistory("collection", id);
-      this.list = this.$utils.getHistory("collection");
+      this.$api
+        .cancelCollection({ id: id })
+        .then(res => {
+          // console.log(res);
+          if (res.code === 200) {
+            this.$utils.removeHistory("collection", id);
+            this.list = this.$utils.getHistory("collection");
+          }
+        })
+        .catch(err => {
+          console.log(err);
+        });
     }
   },
   mounted() {

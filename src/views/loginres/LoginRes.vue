@@ -70,12 +70,12 @@
         </van-field>
         <div class="btn_dv flex-a-center loginres_btn_dv">
           <div class="m-r10">
-            <van-button type="primary" class="wbfb" @click="login"
+            <van-button type="primary" class="wbfb" @click="changeFlag(true)"
               >登录</van-button
             >
           </div>
           <div>
-            <van-button type="danger" class="wbfb fj">注册</van-button>
+            <van-button type="danger" class="wbfb fj" @click="changeFlag(false)">注册</van-button>
           </div>
         </div>
       </van-form>
@@ -208,9 +208,9 @@ export default {
           console.log(err);
         });
     },
-    //点击登录
-    login() {
-      this.isLogin = true;
+    //点击登录 / 注册
+    changeFlag(flag) {
+      this.isLogin = flag;
     },
     //切换验证码
     changeCode() {

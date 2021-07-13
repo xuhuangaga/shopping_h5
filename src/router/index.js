@@ -156,14 +156,6 @@ const routes = [
     meta: {
       title: '评价详情'
     }
-  },
-  {
-    path: '/test',
-    name: 'Test',
-    component: () => import('../views/evaluate/test.vue'),
-    meta: {
-      title: '测试'
-    }
   }
 ]
 

@@ -4,15 +4,9 @@
       <van-swipe-item
         v-for="(item, index) in 2"
         :key="index"
-        style="height:500px"
+        class=" flex-j-center a-center"
       >
-        <img
-          :src="info.image_path"
-          @click="HandleclickImg(index)"
-          v-for="(item, index) in 2"
-          width="375"
-          height="375"
-        />
+        <img :src="info.image" @click="HandleclickImg(index)" class="wbfb hbfb"/>
       </van-swipe-item>
     </van-swipe>
   </div>
@@ -54,11 +48,4 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-.banner {
-  img {
-    position: absolute;
-    top: 60px;
-    left: 0px;
-  }
-}
 </style>

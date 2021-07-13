@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="evaluateList" class="p-10" style="padding-top:290px">
+    <div v-if="evaluateList" class="p-10" style="padding-top:310px">
       <div
         v-for="(item, index) in evaluateList"
         :key="index"
@@ -9,18 +9,17 @@
         <div>
           <img :src="item.image_path" width="100" height="100" />
         </div>
-        <div class="wbfb m-l10">
+        <div class="wbfb m-l10" @click="gotoDetail(item.cid)">
           <div>{{ item.name }}</div>
           <div class="comment flex-j-end a-center">
             <van-icon name="chat-o" />
-            <div class="comment_dv" @click="goto(item)">
+            <div class="comment_dv" @click.stop="goto(item)">
               评论晒单
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div v-else class="p-20 t-a-center">暂无待评价的订单...</div>
   </div>
 </template>
 
@@ -41,7 +40,11 @@ export default {
     //跳转页面
     goto(item) {
       this.$utils.goto("/commentcenter", JSON.stringify(item));
-    }
+    },
+    //跳转到详情页面
+    gotoDetail(id) {
+      this.$utils.goto('/detail', id);
+    },
   },
   mounted() {},
   computed: {},

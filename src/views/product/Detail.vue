@@ -95,7 +95,7 @@ export default {
           if (res.goods.goodsOne) {
             this.info = res.goods.goodsOne;
             this.comment = res.goods.comment;
-            // console.log(this.comment);
+            // console.log(this.info);
             //页面一加载存储浏览记录到localstorage 不能重复添加
             this.$utils.saveHistory({
               key: "browse",

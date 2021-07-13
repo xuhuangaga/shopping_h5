@@ -178,7 +178,7 @@ export default {
       let money = 0;
       this.list.filter(item => {
         if (item.check) {
-          money += item.mallPrice;
+          money += item.mallPrice*item.count;
         }
       });
       return money;
