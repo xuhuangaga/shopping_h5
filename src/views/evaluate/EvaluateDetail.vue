@@ -1,13 +1,13 @@
 <template>
   <div class="c_home_text">
     <topslot name="评价详情"></topslot>
-    <div class="content_box">
+    <div class="content_box" v-if="evaluateOne && evaluateOne.user">
       <div class=" flex-j-between a-center p-10">
         <div class="avatar yd p-10">
-          <img :src="user.avatar" width="40" height="40" />
+          <img :src="evaluateOne.user[0].avatar" width="40" height="40" />
         </div>
         <div>
-          <div>{{ evaluateOne.anonymous?'匿名人士':user.nickname}}</div>
+          <div>{{ evaluateOne.anonymous?'匿名人士':evaluateOne.user[0].nickname}}</div>
           <div class="m-t10"><van-rate v-model="evaluateOne.rate" :size="10"/></div>
         </div>
         <div>{{ evaluateOne.comment_time }}</div>
@@ -47,7 +47,6 @@ export default {
   data() {
     return {
       evaluateOne: {},
-      user:{}
     };
   },
   components: {
@@ -61,10 +60,9 @@ export default {
           _id: this.$route.query._id
         })
         .then(res => {
-          // console.log(res);
+        // console.log(res);
           if (res.code === 200) {
             this.evaluateOne = res.evaluateOne;
-            this.user = res.evaluateOne.user[0];
           }
         })
         .catch(err => {

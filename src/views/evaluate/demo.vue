@@ -1,5 +1,5 @@
 <template>
-  <div class="c_home_text">
+  <div class="c_home_text p-relative">
     <topslot name="评价中心"></topslot>
     <div class="content_box p_fixed" style="z-index:999">
       <img
@@ -8,31 +8,22 @@
       />
     </div>
     <div class="tab bg-c-w">
-      <div class="tab_box evaluate_tabs_dv">
-        <van-tabs v-model="active" @change="change">
+      <div class="tab_box p-relative evaluate_tabs_dv">
+        <van-tabs v-model="active">
           <van-tab title="待评价">
-            <van-pull-refresh v-model="refreshing">
-              <van-list
-                v-model="loading"
+            <!-- <van-pull-refresh v-model="refreshing" @refresh="onRefresh">
+              <van-list -->
+            <!-- v-model="loading"
                 :finished="finished"
                 finished-text="没有更多了"
                 @load="onLoad"
-              >
-                <No :evaluateList="evaluateList"></No>
-              </van-list>
-            </van-pull-refresh>
+              > -->
+            <No :evaluateList="evaluateList" @fetchData="fetchData"></No>
+            <!-- </van-list>
+            </van-pull-refresh> -->
           </van-tab>
           <van-tab title="已评价">
-            <van-pull-refresh v-model="refreshing">
-              <van-list
-                v-model="loading"
-                :finished="finished"
-                finished-text="没有更多了"
-                @load="onLoad1"
-              >
-                <Yes :alreadyEvaluated="alreadyEvaluated"></Yes>
-              </van-list>
-            </van-pull-refresh>
+            <Yes :alreadyEvaluated="alreadyEvaluated"></Yes>
           </van-tab>
         </van-tabs>
       </div>
@@ -67,7 +58,46 @@ export default {
     Yes
   },
   methods: {
-    //未评价
+    //跳转页面
+    goto(item) {
+      this.$utils.goto("/commentcenter", JSON.stringify(item));
+    },
+    gotodetail(cid, _id) {
+      this.$router.push({
+        path: "/evaluatedetail",
+        query: {
+          id: cid,
+          _id: _id
+        }
+      });
+    },
+    //获取已评价数据
+    alreadyData() {
+      this.$api
+        .alreadyEvaluated()
+        .then(res => {
+          // console.log(res);
+          if (res.code === 200) {
+            this.alreadyEvaluated = res.data.list;
+          }
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    }, //获取未评价信息
+    getTobeEvaluated() {
+      this.$api
+        .tobeEvaluated(this.page)
+        .then(res => {
+          // console.log(res);
+          if (res.code === 200) {
+             this.evaluateList=this.evaluateList.concat(res.data.list);
+          }
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    },
     onLoad() {
       setTimeout(() => {
         if (this.refreshing) {
@@ -94,44 +124,23 @@ export default {
           });
       }, 1000);
     },
-    //已评价
-    onLoad1() {
-      setTimeout(() => {
-        if (this.refreshing) {
-          this.alreadyEvaluated = [];
-          this.refreshing = false;
-        }
-        this.$api
-          .alreadyEvaluated(this.page)
-          .then(res => {
-            // console.log(res.data);
-            if (res.code === 200) {
-              this.count = res.data.count;
-              this.alreadyEvaluated = this.alreadyEvaluated.concat(res.data.list);
-              this.page++;
-              if (this.alreadyEvaluated.length >= this.count) {
-                this.finished = true;
-              } else {
-                this.loading = false;
-              }
-            }
-          })
-          .catch(err => {
-            console.log(err);
-          });
-      }, 1000);
+    onRefresh() {
+      // 清空列表数据
+      this.finished = false;
+
+      // 重新加载数据
+      // 将 loading 设置为 true，表示处于加载状态
+      this.loading = true;
+      this.onLoad();
     },
-    change(){
-      this.alreadyEvaluated=[]
-      this.evaluateList=[]
-      this.refreshing=false
-      this.loading=false
-      this.finished=false
-      this.page=1
-      this.count=0
+    fetchData() {
+      this.page++;
+      this.getTobeEvaluated();
     }
   },
   mounted() {
+    this.alreadyData();
+    this.getTobeEvaluated();
   },
   computed: {},
   watch: {}

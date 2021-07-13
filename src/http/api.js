@@ -13,7 +13,7 @@ export default {
   },
   //分类查询
   // id:默认分类的id
-  classification(id ) {
+  classification(id) {
     return http.get(`/classification?mallSubId=${id}`)
   },
   //查询获取购物车数据
@@ -30,7 +30,7 @@ export default {
   //购物车商品删除
   // 商品cid(数组) 直接传入数组
   deleteShop(cid) {
-    return http.post('/deleteShop',  cid )
+    return http.post('/deleteShop', cid)
   },
   //购物车支付
   // address:收货地址
@@ -44,13 +44,13 @@ export default {
   },
   //单个商品详情
   // id:商品的id
-  getGoodsById( id ) {
+  getGoodsById(id) {
     return http.get(`/goods/one?id=${id}`)
   },
   //收藏单个商品
   // goods：商品的详情信息(传商品对象)
-  collection( goods ) {
-    return http.post('/collection', goods )
+  collection(goods) {
+    return http.post('/collection', goods)
   },
   //取消收藏
   // id:商品的id
@@ -155,13 +155,15 @@ export default {
     return http.get('/alreadyEvaluated')
   },
   // 查询未评价
-  tobeEvaluated() {
-    return http.get('/tobeEvaluated')
+  tobeEvaluated(page = 1) {
+    return http.get('/tobeEvaluated', {
+      params: { page }
+    })
   },
   // 查询单条评论
   // id:商品id
   // _id:数据库的那条id
-  evaluateOne ({id,_id}){
-    return http.post('/evaluateOne',{id,_id})
+  evaluateOne({ id, _id }) {
+    return http.post('/evaluateOne', { id, _id })
   }
 }

@@ -29,3 +29,45 @@ _message: "Comment validation failed"
 pid: 12836
 hostname: WINDOWS-9MNNE6M
 
+2021-07-12 09:03:24,194 ERROR 7272 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+errno: -4077
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 7272
+hostname: WINDOWS-9MNNE6M
+
+2021-07-12 09:29:20,597 ERROR 3528 nodejs.ClusterClientNoResponseError: client no response in 310396ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\前端学习\项目\vue-h5shopping\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 3528
+hostname: WINDOWS-9MNNE6M
+
+2021-07-12 11:07:50,502 ERROR 3528 nodejs.ClusterClientNoResponseError: client no response in 4829082ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\前端学习\项目\vue-h5shopping\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 3528
+hostname: WINDOWS-9MNNE6M
+
+2021-07-12 11:50:12,232 ERROR 4352 [-/127.0.0.1/-/12ms GET /v1/tobeEvaluated?page=0] nodejs.MongoError: Skip value must be non-negative, but received: -10
+    at Connection.<anonymous> (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongodb@3.6.8@mongodb\lib\core\connection\pool.js:451:61)
+    at Connection.emit (events.js:376:20)
+    at processMessage (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongodb@3.6.8@mongodb\lib\core\connection\connection.js:451:10)
+    at Socket.<anonymous> (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongodb@3.6.8@mongodb\lib\core\connection\connection.js:620:15)
+    at Socket.emit (events.js:376:20)
+    at addChunk (internal/streams/readable.js:309:12)
+    at readableAddChunk (internal/streams/readable.js:284:9)
+    at Socket.Readable.push (internal/streams/readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:188:23)
+ok: 0
+code: 2
+codeName: "BadValue"
+name: "MongoError"
+pid: 4352
+hostname: WINDOWS-9MNNE6M
+

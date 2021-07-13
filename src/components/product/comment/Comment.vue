@@ -3,11 +3,11 @@
     <div v-for="(item, index) in comment" :key="index" class="p-10 border_b">
       <div class="flex-j-between a-center">
         <div class="comment_l">
-          <img :src="item.avatar" width="50" height="50" />
+          <img :src="item.anonymous?item.comment_avatar:item.user[0].avatar" width="50" height="50" />
         </div>
         <div class="m-l10 comment_r">
           <div class="flex-j-between a-center">
-            <div>{{ item.nickname }}</div>
+            <div>{{ item.anonymous?item.comment_nickname:item.user[0].nickname }}</div>
             <div>{{ item.comment_time }}</div>
           </div>
           <div class="m-t-b10">
@@ -48,16 +48,9 @@ export default {
   },
   components: {},
   methods: {
-    getData(){
-      this.comment.map(item=>{
-        this.$set(item,'avatar',item.anonymous?item.comment_avatar:item.user[0].avatar)
-        this.$set(item,'nickname',item.anonymous?item.comment_nickname:item.user[0].nickname)
-      })
-    }
   },
   mounted() {
-    //获取数据
-    this.getData();
+    // console.log(this.comment);
   },
   computed: {},
   watch: {}

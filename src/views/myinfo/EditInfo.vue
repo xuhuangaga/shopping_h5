@@ -94,7 +94,8 @@ export default {
     //验证不通过触发的事件
     onFailed(errorInfo) {
       console.log("failed", errorInfo);
-    }, //验证通过触发的事件
+    },
+     //验证通过触发的事件
     submit() {
       //修改vuex的用户信息  修改localstorage的用户信息
       this.$store.commit("setUser", JSON.stringify(this.userInfo));

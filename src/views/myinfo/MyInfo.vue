@@ -146,7 +146,7 @@ export default {
         .then(res => {
           // console.log(res);
           if (res.code === 200) {
-            this.evaluate = res.data.list.length;
+            this.evaluate = res.data.count;
           }
         })
         .catch(err => {

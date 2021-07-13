@@ -117,13 +117,14 @@ $backgroundf:#fff !important;
 
 .evaluate_tabs_dv {
   .van-tabs__wrap {
-    position: absolute;
-    top: -35px !important;
+    position: fixed;
     justify-content: center;
     margin-left: 5%;
     width: 90%;
     border-radius: 10px;
     box-shadow: 0px 0px 10px #ccc;
+    top: 250px;
+    z-index: 999;
   }
 }
 
