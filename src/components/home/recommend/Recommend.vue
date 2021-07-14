@@ -1,10 +1,10 @@
 <template>
   <div class="c_home_text">
-    <div class="p-10 border_bc">商品推荐</div>
+    <div class="p-10 pro_tj">商品推荐</div>
     <!-- 这里是父盒子 -->
     <div class="flex o_hidden" ref="wrapper">
       <!-- 这里是子盒子，即滚动区域 -->
-      <div class="flex-a-center" style="flex:1">
+      <div class="flex-a-center betterscoll_dv" style="flex:1">
         <div
           v-for="(item, index) in recommend"
           :key="index"
@@ -68,7 +68,8 @@ export default {
             startX: 0, // 配置的详细信息请参考better-scroll的官方文档，这里不再赘述
             click: true,
             scrollX: true,
-            scrollY: false
+            scrollY: false,
+            eventPassthrough: "vertical"
           });
         }
       });
@@ -136,12 +137,14 @@ export default {
 </script>
 
 <style lang='scss' scoped>
+.pro_tj,.betterscoll_dv {
+  border-bottom: 1px solid #eee;
+}
 .pro_dv {
-  border-right: 1px solid #ccc;
-  border-top: 1px solid #ccc;
+  border-right: 1px solid #eee;
   width: 124px;
   &:nth-child(1) {
-    border-left: 1px solid #ccc;
+    border-left: 1px solid #eee;
   }
 }
 

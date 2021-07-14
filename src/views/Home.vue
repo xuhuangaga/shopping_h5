@@ -1,71 +1,77 @@
 <template>
   <div class="hom_dv">
-    <!-- 顶部 -->
-    <top class="f-size14 hpm_top wbfb" :class="{ hpm_top_show: show }">
-      <template #left>
-        <div class="city" @click="goto('/citys', '')">
-          {{ city ? city : "定位中" }}
-          <i class="iconfont icon-xjt"></i>
-        </div>
-      </template>
-      <template #center>
-        <div :class="{ ipt_dv: !show }" class="ipt">
-          <van-search
-            v-model="value"
-            placeholder="请输入搜索关键词"
-            @focus="iptFocus"
-          />
-        </div>
-      </template>
-      <template #right>
-        <div class="c_home_text wbfb" @click="cancle" v-show="show">取消</div>
-      </template>
-    </top>
-    <!-- 显示搜索的数据列表 -->
-    <div v-show="show">
-      <search
-        :list="list"
-        :historyList="history"
-        :value="value"
-        @subHistory="subHistory"
-        @changeHistory="changeHistory"
-      ></search>
+    <div v-if="lodaingShow">
+      <loding :show="lodaingShow"></loding>
     </div>
-    <div v-show="!show" class="content">
-      <!-- banner -->
-      <banner v-if="slides" :slides="slides"></banner>
-      <!-- 分类板块 -->
-      <classify
-        v-if="category"
-        :category="category"
-        :advertesPicture="advertesPicture"
-      ></classify>
-      <!-- 推荐商品 -->
-      <recommend v-if="recommend" :recommend="recommend"></recommend>
-      <!-- 楼层一 -->
-      <floor
-        v-if="floor1"
-        :floor="floor1"
-        index="1F"
-        :floorname="floorName.floor1"
-      ></floor>
-      <!-- 楼层二 -->
-      <floor
-        v-if="floor2"
-        :floor="floor2"
-        index="2F"
-        :floorname="floorName.floor2"
-      ></floor>
-      <!-- 楼层三 -->
-      <floor
-        v-if="floor3"
-        :floor="floor3"
-        index="3F"
-        :floorname="floorName.floor3"
-      ></floor>
-      <!-- 热销商品 -->
-      <hot v-if="hot" :hot="hot"></hot>
-      <bottom></bottom>
+    <div v-else>
+      <van-loading size="24px" v-show="lodaingShow">加载中...</van-loading>
+      <!-- 顶部 -->
+      <top class="f-size14 hpm_top wbfb" :class="{ hpm_top_show: show }">
+        <template #left>
+          <div class="city" @click="goto('/citys', '')">
+            {{ city ? city : "定位中" }}
+            <i class="iconfont icon-xjt"></i>
+          </div>
+        </template>
+        <template #center>
+          <div :class="{ ipt_dv: !show }" class="ipt">
+            <van-search
+              v-model="value"
+              placeholder="请输入搜索关键词"
+              @focus="iptFocus"
+            />
+          </div>
+        </template>
+        <template #right>
+          <div class="c_home_text wbfb" @click="cancle" v-show="show">取消</div>
+        </template>
+      </top>
+      <!-- 显示搜索的数据列表 -->
+      <div v-show="show">
+        <search
+          :list="list"
+          :historyList="history"
+          :value="value"
+          @subHistory="subHistory"
+          @changeHistory="changeHistory"
+        ></search>
+      </div>
+      <div v-show="!show" class="content">
+        <!-- banner -->
+        <banner v-if="slides" :slides="slides"></banner>
+        <!-- 分类板块 -->
+        <classify
+          v-if="category"
+          :category="category"
+          :advertesPicture="advertesPicture"
+        ></classify>
+        <!-- 推荐商品 -->
+        <recommend v-if="recommend" :recommend="recommend"></recommend>
+        <!-- 楼层一 -->
+        <floor
+          v-if="floor1"
+          :floor="floor1"
+          index="1F"
+          :floorname="floorName.floor1"
+        ></floor>
+        <!-- 楼层二 -->
+        <floor
+          v-if="floor2"
+          :floor="floor2"
+          index="2F"
+          :floorname="floorName.floor2"
+        ></floor>
+        <!-- 楼层三 -->
+        <floor
+          v-if="floor3"
+          :floor="floor3"
+          index="3F"
+          :floorname="floorName.floor3"
+        ></floor>
+        <!-- 热销商品 -->
+        <hot v-if="hot" :hot="hot"></hot>
+        <bottom></bottom>
+      </div>
     </div>
   </div>
 </template>
@@ -106,7 +112,9 @@ export default {
       history: [],
       //楼层名称对象
       floorName: {},
-      advertesPicture: ""
+      //分类板块下的图片
+      advertesPicture: "",
+      lodaingShow: true
     };
   },
   components: {
@@ -158,6 +166,7 @@ export default {
       this.$api
         .getHomeData()
         .then(res => {
+          this.lodaingShow = false;
           // console.log(res);
           if (res.code === 200) {
             //轮播图
@@ -181,6 +190,7 @@ export default {
           }
         })
         .catch(err => {
+          this.lodaingShow = false;
           console.log(err);
         });
     },
@@ -188,7 +198,7 @@ export default {
     iptFocus() {
       this.show = true;
       this.value = this.value;
-        if (this.user) this.history = this.$utils.getHistory(`${this.user.username}search`);
+      this.getSearchHistory();
     },
     //点击取消
     cancle() {
@@ -205,7 +215,15 @@ export default {
     },
     //清除历史记录
     changeHistory() {
-        if (this.user) this.history = this.$utils.getHistory(`${this.user.username}search`);
+      this.getSearchHistory();
+    },
+    //获取历史记录
+    getSearchHistory() {
+      let username = "";
+      if (this.user) {
+        username = this.user.username;
+      }
+      this.history = this.$utils.getHistory(`${username}search`);
     }
   },
   mounted() {
@@ -241,7 +259,7 @@ export default {
           });
       } else {
         //获取搜索的历史记录
-        if (this.user) this.history = this.$utils.getHistory(`${this.user.username}search`);
+        this.getSearchHistory();
         this.list = [];
       }
     }

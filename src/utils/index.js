@@ -8,7 +8,6 @@
 import { Dialog, Toast } from 'vant';
 //导入路由
 import router from '../router';
-
 export default {
   //检测用户是否登录
   // key:本地存储用户信息的key

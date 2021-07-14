@@ -102,14 +102,16 @@ export default {
     //点击搜索的数据
     activeItem(item) {
       if (item) {
+        let username = "";
         if (this.user) {
-          //添加搜索历史记录
-          this.$utils.saveHistory({
-            key: `${this.user.username}search`,
-            data: this.value,
-            item: "id"
-          });
+          username = this.user.username;
         }
+        //添加搜索历史记录
+        this.$utils.saveHistory({
+          key: `${username}search`,
+          data: this.value,
+          item: "id"
+        });
         //跳转页面
         this.goto("/detail", item.id);
       } else {

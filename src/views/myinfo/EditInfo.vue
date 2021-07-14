@@ -51,16 +51,12 @@
           </div>
         </div>
         <div class="p-10 border_b flex-a-center a-center">
-          <div class="content_l">邮箱</div>
-          <div class="content_r">1234456@qq.com</div>
-        </div>
-        <div class="p-10 border_b flex-a-center a-center">
           <div class="content_l">出生年月</div>
           <div class="content_r">
             <van-field
               v-model="birthday"
               placeholder="请选择出生年月"
-              @focus="focus"
+              @click="show=true"
               readonly
             />
             <van-calendar
@@ -68,6 +64,7 @@
               @confirm="onConfirm"
               title="请选择出生年月"
               :min-date="minDate"
+              :max-date="maxDate"
             />
           </div>
         </div>
@@ -91,6 +88,7 @@ export default {
       birthday: "",
       show: false,
       minDate: new Date(1950, 0, 1),
+      maxDate: new Date(),
       userInfo: {}
     };
   },
@@ -118,15 +116,10 @@ export default {
       return /^[a-zA-Z0-9_-]{4,16}$/.test(val);
     },
     formatDate(date) {
-      console.log(date);
       this.userInfo.year = date.getFullYear();
       this.userInfo.month = date.getMonth() + 1;
       this.userInfo.day = date.getDate();
       this.birthday = `${this.userInfo.year}年${this.userInfo.month}月${this.userInfo.day}日`;
-    },
-    //年月日输入框获得焦点的事件
-    focus() {
-      this.show = true;
     },
     //选择年月日
     onConfirm(date) {

@@ -10,6 +10,7 @@ import bottom from './components/buttom/Buttom.vue'
 import {Toast,Dialog} from 'vant'
 import utils from './utils'
 import topslot from "./components/top/TopSlot";
+import loding from './components/loding/loding.vue'
 
 
 //把api挂载成全局变量
@@ -23,6 +24,7 @@ Vue.prototype.$utils=utils
 Vue.component('top',top)
 Vue.component('bottom',bottom)
 Vue.component('topslot',topslot)
+Vue.component('loding',loding)
 
 Vue.use(Vant)
 Vue.config.productionTip = false

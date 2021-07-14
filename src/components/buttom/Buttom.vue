@@ -13,10 +13,7 @@
           <i class="iconfont icon-fenlei"></i>
         </template>
       </van-tabbar-item>
-      <van-tabbar-item
-        icon="shopping-cart"
-        :badge="carNum"
-        url="carts"
+      <van-tabbar-item icon="shopping-cart" :badge="carNum" url="carts"
         >购物车</van-tabbar-item
       >
       <van-tabbar-item icon="contact" url="myinfo">我的</van-tabbar-item>
@@ -40,7 +37,7 @@ export default {
       if (url != this.$route.path) {
         this.$utils.goto(url, id);
       }
-    }
+    },
   },
   mounted() {},
   computed: {
@@ -48,9 +45,11 @@ export default {
       let count = 0;
       //未登录清空下 购物车数量是0
       if (this.$store.state.user) {
-        count = this.$store.state.carNum;
-      }else {
-        count = '';
+        this.$store.state.carNum
+          ? (count = this.$store.state.carNum)
+          : (count = 0);
+      } else {
+        count = "";
       }
       return count;
     }

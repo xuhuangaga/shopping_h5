@@ -21,7 +21,7 @@
         ></collection>
       </div>
     </div>
-    <div class=" border_b" style="height:20px"></div>
+    <!-- <div class=" border_b" style="height:20px"></div> -->
     <!-- 店铺信息 -->
     <div class="flex-j-between p-10">
       <div class=" flex-a-center">

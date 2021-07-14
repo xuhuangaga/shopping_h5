@@ -52,8 +52,8 @@ export default {
   background: #eee;
 }
 .pro_dv {
-  border-right: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
   width: 44%;
   &:nth-child(2n) {
     border-right: none;

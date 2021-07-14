@@ -10,7 +10,7 @@
       </div>
       <div><i class="iconfont icon-youjiantou"></i></div>
     </div>
-    <div class=" border_b" style="height:20px"></div>
+    <!-- <div class=" border_b" style="height:20px"></div> -->
     <div
       class=" flex-j-between a-center p-10 border_b"
       @click="checkLoginGoto('/collection')"

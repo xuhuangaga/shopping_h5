@@ -26,8 +26,27 @@ export default {
   methods: {
     //返回上一页
     goBack() {
-      //如果是编辑地址  返回地址列表
-      this.$router.back();
+      console.log(this.$route.path);
+      switch (this.$route.path) {
+        case "/addresslist":
+          if (!Number(localStorage.getItem("addresslistItem"))) {
+            this.$utils.goto("/pay");
+          } else {
+            this.$router.push("/myinfo");
+          }
+          break;
+        case "/pay":
+          if (Number(localStorage.getItem("idDirect"))) {
+            this.$router.back();
+          } else {
+            this.$router.push("/carts");
+          }
+          break;
+        default:
+          //如果是编辑地址  返回地址列表
+          this.$router.back();
+          break;
+      }
     }
   },
   mounted() {},
