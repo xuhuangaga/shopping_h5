@@ -58,7 +58,9 @@ export default {
           // console.log(res);
           if (res.code === 200) {
             this.$utils.removeHistory(`${this.user.username}collection`, id);
-            this.list = this.$utils.getHistory(`${this.user.username}collection`);
+            this.list = this.$utils.getHistory(
+              `${this.user.username}collection`
+            );
           }
         })
         .catch(err => {

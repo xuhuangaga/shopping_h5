@@ -166,6 +166,25 @@ const router = new VueRouter({
 })
 router.beforeEach((to, from, next) => {
   document.title = to.meta.title
-  next()
+  //以下页面必须登录才能进入
+  switch (to.path) {
+    case '/collection':
+    case '/orders':
+    case '/addresslist':
+    case '/history':
+    case '/pay':
+    case '/carts':
+      //判断是否登录
+      //判断是否登录 如果没有登录进入此页面 直接跳入首页
+      if (!JSON.parse(localStorage.getItem("h5_shopping_user"))) {
+        next('/')
+      } else {
+        next()
+      }
+      break;
+    default:
+      next()
+      break;
+  }
 })
 export default router

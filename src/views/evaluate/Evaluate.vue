@@ -1,7 +1,7 @@
 <template>
   <div class="c_home_text">
     <topslot name="评价中心"></topslot>
-    <div class="content_box p_fixed" style="z-index:999">
+    <div class="econtent_box p_fixed" style="z-index:999">
       <img
         src="../../assets/images/evaluate.jpg"
         class=" wbfb hbfb data_list"
@@ -11,28 +11,24 @@
       <div class="tab_box evaluate_tabs_dv">
         <van-tabs v-model="active" @change="change">
           <van-tab title="待评价">
-            <van-pull-refresh v-model="refreshing">
-              <van-list
-                v-model="loading"
-                :finished="finished"
-                finished-text="没有更多了"
-                @load="onLoad"
-              >
-                <No :evaluateList="evaluateList"></No>
-              </van-list>
-            </van-pull-refresh>
+            <van-list
+              v-model="loading"
+              :finished="finished"
+              finished-text="没有更多了"
+              @load="onLoad"
+            >
+              <No :evaluateList="evaluateList"></No>
+            </van-list>
           </van-tab>
           <van-tab title="已评价">
-            <van-pull-refresh v-model="refreshing">
-              <van-list
-                v-model="loading"
-                :finished="finished"
-                finished-text="没有更多了"
-                @load="onLoad1"
-              >
-                <Yes :alreadyEvaluated="alreadyEvaluated"></Yes>
-              </van-list>
-            </van-pull-refresh>
+            <van-list
+              v-model="loading"
+              :finished="finished"
+              finished-text="没有更多了"
+              @load="onLoad1"
+            >
+              <Yes :alreadyEvaluated="alreadyEvaluated"></Yes>
+            </van-list>
           </van-tab>
         </van-tabs>
       </div>
@@ -57,8 +53,7 @@ export default {
       evaluateList: [],
       loading: false,
       finished: false,
-      refreshing: false,
-      page: 1,
+      page: 1
     };
   },
   components: {
@@ -109,35 +104,26 @@ export default {
     //未评价 下拉刷新
     onLoad() {
       if (this.page === 1) {
-        this.getNoData()
+        this.getNoData();
       } else {
         setTimeout(() => {
-          if (this.refreshing) {
-            this.evaluateList = [];
-            this.refreshing = false;
-          }
-          this.getNoData()
+          this.getNoData();
         }, 1000);
       }
     },
     //已评价 下拉刷新
     onLoad1() {
-       if (this.page === 1) {
-        this.getYesData()
+      if (this.page === 1) {
+        this.getYesData();
       } else {
         setTimeout(() => {
-          if (this.refreshing) {
-            this.evaluateList = [];
-            this.refreshing = false;
-          }
-          this.getYesData()
+          this.getYesData();
         }, 1000);
       }
     },
     change(index) {
       this.alreadyEvaluated = [];
       this.evaluateList = [];
-      this.refreshing = false;
       this.page = 1;
       // 清空列表数据
       this.finished = false;
@@ -147,11 +133,15 @@ export default {
       index === 0 ? this.onLoad() : this.onLoad1();
     }
   },
-  mounted() {},
+  mounted() {
+  },
   computed: {},
   watch: {}
 };
 </script>
 
 <style lang='scss' scoped>
+.econtent_box {
+  top: 42px;
+}
 </style>

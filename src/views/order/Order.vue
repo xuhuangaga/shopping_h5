@@ -18,7 +18,7 @@
             该功能待开发中...
           </div></van-tab
         >
-         <van-tab title="待收货">
+        <van-tab title="待收货">
           <div class="p-10 t-a-center">
             该功能待开发中...
           </div></van-tab
@@ -51,9 +51,9 @@ export default {
     //获取数据
     getData() {
       //选中标签key
-      let id = this.$route.query.id
-      if(id){
-        this.active = Number(id)
+      let id = this.$route.query.id;
+      if (id) {
+        this.active = Number(id);
       }
       //获取所有订单数据
       this.$api

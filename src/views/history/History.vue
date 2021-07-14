@@ -2,7 +2,10 @@
   <div class="c_home_text">
     <topslot name="最近浏览"></topslot>
     <div class="content_box">
-      <div v-if="!list || list.length ===0" class="flex-j-center a-center p-tb20">
+      <div
+        v-if="!list || list.length === 0"
+        class="flex-j-center a-center p-tb20"
+      >
         暂无浏览记录...
       </div>
       <div v-else>
@@ -41,8 +44,7 @@ export default {
   components: {},
   methods: {
     getData() {
-      if (this.user)
-        this.list = this.$utils.getHistory(`${this.user.username}browse`);
+      this.list = this.$utils.getHistory(`${this.user.username}browse`);
     },
     //跳转页面
     goto(url, id) {
