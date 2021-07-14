@@ -8,7 +8,7 @@
             <completed v-if="list" :list="list"></completed>
           </div>
         </van-tab>
-        <van-tab title="待支付">
+        <van-tab title="待付款">
           <div class="p-10 t-a-center">
             该功能待开发中...
           </div>

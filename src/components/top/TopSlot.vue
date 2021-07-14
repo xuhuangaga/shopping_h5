@@ -5,7 +5,7 @@
         <i class="iconfont icon-zjt f-size20" @click="goBack"></i>
       </template>
       <template #center>
-        {{name}}
+        {{ name }}
       </template>
     </top>
   </div>
@@ -15,8 +15,8 @@
 export default {
   name: "",
   props: {
-    name:{
-      type:String
+    name: {
+      type: String
     }
   },
   data() {
@@ -26,6 +26,7 @@ export default {
   methods: {
     //返回上一页
     goBack() {
+      //如果是编辑地址  返回地址列表
       this.$router.back();
     }
   },

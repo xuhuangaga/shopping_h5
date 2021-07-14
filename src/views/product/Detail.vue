@@ -97,14 +97,16 @@ export default {
             this.comment = res.goods.comment;
             // console.log(this.info);
             //页面一加载存储浏览记录到localstorage 不能重复添加
-            this.$utils.saveHistory({
-              key: "browse",
-              data: this.info,
-              item: "id"
-            });
-          }else {
-            this.$toast('该产品已下架')
-            this.$utils.goto('/')
+            if (this.user) {
+              this.$utils.saveHistory({
+                key: `${this.user.username}browse`,
+                data: this.info,
+                item: "id"
+              });
+            }
+          } else {
+            this.$toast("该产品已下架");
+            this.$utils.goto("/");
           }
         })
         .catch(err => {
@@ -126,7 +128,12 @@ export default {
     this.getData();
     window.scrollTo(0, 0);
   },
-  computed: {},
+  computed: {
+    //用户信息
+    user() {
+      return JSON.parse(this.$store.state.user);
+    }
+  },
   watch: {}
 };
 </script>

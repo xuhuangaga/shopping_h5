@@ -102,12 +102,14 @@ export default {
     //点击搜索的数据
     activeItem(item) {
       if (item) {
-        //添加搜索历史记录
-        this.$utils.saveHistory({
-          key: "search",
-          data: this.value,
-          item:'id'
-        });
+        if (this.user) {
+          //添加搜索历史记录
+          this.$utils.saveHistory({
+            key: `${this.user.username}search`,
+            data: this.value,
+            item: "id"
+          });
+        }
         //跳转页面
         this.goto("/detail", item.id);
       } else {
@@ -119,7 +121,8 @@ export default {
           })
           .then(() => {
             //清空搜索的历史记录
-            this.$utils.removeHistory("search", "");
+            if (this.user)
+              this.$utils.removeHistory(`${this.user.username}search`, "");
             this.$emit("changeHistory");
           })
           .catch(() => {
@@ -137,7 +140,12 @@ export default {
     }
   },
   mounted() {},
-  computed: {},
+  computed: {
+    //用户信息
+    user() {
+      return JSON.parse(this.$store.state.user);
+    }
+  },
   watch: {}
 };
 </script>

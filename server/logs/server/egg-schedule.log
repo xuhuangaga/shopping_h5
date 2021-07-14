@@ -67,3 +67,15 @@
 2021-07-13 08:31:09,333 INFO 1284 [egg-schedule]: register schedule E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-multipart@2.12.0@egg-multipart\app\schedule\clean_tmpdir.js
 2021-07-13 08:31:09,333 INFO 1284 [egg-schedule]: register schedule E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js
 2021-07-13 08:31:09,333 INFO 1284 [egg-schedule]: register schedule E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js
+2021-07-14 08:39:52,298 INFO 9292 [egg-schedule]: register schedule E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-multipart@2.12.0@egg-multipart\app\schedule\clean_tmpdir.js
+2021-07-14 08:39:52,298 INFO 9292 [egg-schedule]: register schedule E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js
+2021-07-14 08:39:52,298 INFO 9292 [egg-schedule]: register schedule E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js
+2021-07-14 08:39:58,472 INFO 2180 [Timer] E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-multipart@2.12.0@egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 71401534ms at 2021-07-15 04:30:00.006
+2021-07-14 08:39:58,474 INFO 2180 [Timer] E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js next time will execute after 55201527ms at 2021-07-15 00:00:00.001
+2021-07-14 08:39:58,475 INFO 2180 [Timer] E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 55202526ms at 2021-07-15 00:00:01.001
+2021-07-14 09:26:41,220 INFO 12492 [egg-schedule]: register schedule E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-multipart@2.12.0@egg-multipart\app\schedule\clean_tmpdir.js
+2021-07-14 09:26:41,220 INFO 12492 [egg-schedule]: register schedule E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js
+2021-07-14 09:26:41,220 INFO 12492 [egg-schedule]: register schedule E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js
+2021-07-14 09:26:43,223 INFO 472 [egg-schedule]: register schedule E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-multipart@2.12.0@egg-multipart\app\schedule\clean_tmpdir.js
+2021-07-14 09:26:43,223 INFO 472 [egg-schedule]: register schedule E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js
+2021-07-14 09:26:43,223 INFO 472 [egg-schedule]: register schedule E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js

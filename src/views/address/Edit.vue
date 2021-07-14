@@ -77,6 +77,9 @@ export default {
     getData() {
       // console.log(this.addressInfo);
       this.addressInfo = JSON.parse(localStorage.getItem("addressItem"));
+      if (!this.addressInfo) {
+        this.$router.push('/addresslist')
+      }
     }
   },
   mounted() {

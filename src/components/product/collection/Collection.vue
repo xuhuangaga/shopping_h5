@@ -54,7 +54,7 @@ export default {
             this.$toast.success(res.msg);
             this.collection = true;
             this.$utils.saveHistory({
-              key: "collection",
+              key: `${this.user.username}collection`,
               data: this.info,
               item: "id"
             });
@@ -74,17 +74,10 @@ export default {
             this.$toast.success(res.msg);
             this.collection = false;
             //取消成功需要删除本地存储的相关数据
-            let history = this.$utils.getHistory("collection");
-            if (history !== null) {
-              // 将以前存的数据转换成数组
-              let newHistory = history.filter(item => {
-                return item.id !== this.info.id;
-              });
-              localStorage.setItem(
-                "collectionHistory",
-                JSON.stringify(newHistory)
-              );
-            }
+            this.$utils.removeHistory(
+              `${this.user.username}collection`,
+              this.info.id
+            );
           }
         })
         .catch(err => {

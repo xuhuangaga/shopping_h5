@@ -71,3 +71,12 @@ name: "MongoError"
 pid: 4352
 hostname: WINDOWS-9MNNE6M
 
+2021-07-14 08:38:58,005 ERROR 13848 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+errno: -4077
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 13848
+hostname: WINDOWS-9MNNE6M
+

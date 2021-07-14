@@ -2,7 +2,7 @@
   <div class="c_home_text">
     <topslot name="最近浏览"></topslot>
     <div class="content_box">
-      <div v-if="list.length === 0" class="flex-j-center a-center p-tb20">
+      <div v-if="!list || list.length ===0" class="flex-j-center a-center p-tb20">
         暂无浏览记录...
       </div>
       <div v-else>
@@ -35,14 +35,14 @@ export default {
   props: {},
   data() {
     return {
-      list: []
+      list: null
     };
   },
-  components: {
-  },
+  components: {},
   methods: {
     getData() {
-      this.list = this.$utils.getHistory("browse");
+      if (this.user)
+        this.list = this.$utils.getHistory(`${this.user.username}browse`);
     },
     //跳转页面
     goto(url, id) {
@@ -50,15 +50,22 @@ export default {
     },
     //删除浏览记录
     del(id) {
-      this.$utils.removeHistory('browse',id)
-      this.list = this.$utils.getHistory("browse");
+      if (this.user) {
+        this.$utils.removeHistory(`${this.user.username}browse`, id);
+        this.list = this.$utils.getHistory(`${this.user.username}browse`);
+      }
     }
   },
   mounted() {
     //获取数据
     this.getData();
   },
-  computed: {},
+  computed: {
+    //用户信息
+    user() {
+      return JSON.parse(this.$store.state.user);
+    }
+  },
   watch: {}
 };
 </script>

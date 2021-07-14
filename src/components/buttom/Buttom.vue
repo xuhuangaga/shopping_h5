@@ -15,7 +15,7 @@
       </van-tabbar-item>
       <van-tabbar-item
         icon="shopping-cart"
-        :badge="carNum ? carNum : 0"
+        :badge="carNum"
         url="carts"
         >购物车</van-tabbar-item
       >
@@ -47,8 +47,12 @@ export default {
     carNum() {
       let count = 0;
       //未登录清空下 购物车数量是0
-      if (this.$store.state.user !== null) count= this.$store.state.carNum;
-      return count
+      if (this.$store.state.user) {
+        count = this.$store.state.carNum;
+      }else {
+        count = '';
+      }
+      return count;
     }
   },
   watch: {}

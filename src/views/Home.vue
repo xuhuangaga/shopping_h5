@@ -188,7 +188,7 @@ export default {
     iptFocus() {
       this.show = true;
       this.value = this.value;
-      this.history = this.$utils.getHistory("search");
+        if (this.user) this.history = this.$utils.getHistory(`${this.user.username}search`);
     },
     //点击取消
     cancle() {
@@ -205,7 +205,7 @@ export default {
     },
     //清除历史记录
     changeHistory() {
-      this.history = this.$utils.getHistory("search");
+        if (this.user) this.history = this.$utils.getHistory(`${this.user.username}search`);
     }
   },
   mounted() {
@@ -218,6 +218,10 @@ export default {
   computed: {
     city() {
       return this.$store.state.city;
+    },
+    //用户信息
+    user() {
+      return JSON.parse(this.$store.state.user);
     }
   },
   watch: {
@@ -237,7 +241,7 @@ export default {
           });
       } else {
         //获取搜索的历史记录
-        this.history = this.$utils.getHistory("search");
+        if (this.user) this.history = this.$utils.getHistory(`${this.user.username}search`);
         this.list = [];
       }
     }

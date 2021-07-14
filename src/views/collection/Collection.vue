@@ -2,7 +2,10 @@
   <div class="c_home_text">
     <topslot name="我的收藏"></topslot>
     <div class="content_box">
-      <div v-if="list.length === 0" class="flex-j-center a-center p-tb20">
+      <div
+        v-if="!list || list.length === 0"
+        class="flex-j-center a-center p-tb20"
+      >
         暂无收藏记录...
       </div>
       <div v-else>
@@ -41,7 +44,7 @@ export default {
   components: {},
   methods: {
     getData() {
-      this.list = this.$utils.getHistory("collection");
+      this.list = this.$utils.getHistory(`${this.user.username}collection`);
     },
     //跳转页面
     goto(url, id) {
@@ -54,8 +57,8 @@ export default {
         .then(res => {
           // console.log(res);
           if (res.code === 200) {
-            this.$utils.removeHistory("collection", id);
-            this.list = this.$utils.getHistory("collection");
+            this.$utils.removeHistory(`${this.user.username}collection`, id);
+            this.list = this.$utils.getHistory(`${this.user.username}collection`);
           }
         })
         .catch(err => {
@@ -67,7 +70,12 @@ export default {
     //获取数据
     this.getData();
   },
-  computed: {},
+  computed: {
+    //获取登录的用户信息
+    user() {
+      return JSON.parse(this.$store.state.user);
+    }
+  },
   watch: {}
 };
 </script>
