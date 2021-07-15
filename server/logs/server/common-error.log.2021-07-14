@@ -1,0 +1,90 @@
+2021-07-08 00:16:17,287 ERROR 8360 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+errno: -4077
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 8360
+hostname: WINDOWS-9MNNE6M
+
+2021-07-08 11:24:15,851 ERROR 12836 [-/127.0.0.1/-/6ms POST /v1/goodsOne/comment] nodejs.ValidationError: Comment validation failed: anonymous: Cast to Boolean failed for value "isAnonymous" (type string) at path "anonymous"
+    at model.Document.invalidate (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\document.js:2757:32)
+    at model.$set (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\document.js:1324:12)
+    at model.$set (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\document.js:1033:16)
+    at model.Document (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\document.js:148:12)
+    at model.Model (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\model.js:105:12)
+    at new model (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongoose@5.13.0@mongoose\lib\model.js:4902:15)
+    at OperatingGoodsController.comment (E:\前端学习\项目\vue-h5shopping\server\app\controller\api\operatingGoods.js:262:25)
+    at Object.callFn (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-core@4.20.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\前端学习\项目\vue-h5shopping\server\node_modules\_egg-core@4.20.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\前端学习\项目\vue-h5shopping\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\前端学习\项目\vue-h5shopping\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\前端学习\项目\vue-h5shopping\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\前端学习\项目\vue-h5shopping\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+errors: {"anonymous":{"stringValue":"\"isAnonymous\"","valueType":"string","kind":"Boolean","value":"isAnonymous","path":"anonymous","reason":{"stringValue":"\"isAnonymous\"","valueType":"string","kind":"boolean","value":"isAnonymous","name":"CastError","message":"Cast to boolean failed for value \"isAnonymous\" (type string) at path \"undefined\""},"name":"CastError","message":"Cast to Boolean failed for value \"isAnonymous\" (type string) at path \"anonymous\""}}
+_message: "Comment validation failed"
+pid: 12836
+hostname: WINDOWS-9MNNE6M
+
+2021-07-12 09:03:24,194 ERROR 7272 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+errno: -4077
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 7272
+hostname: WINDOWS-9MNNE6M
+
+2021-07-12 09:29:20,597 ERROR 3528 nodejs.ClusterClientNoResponseError: client no response in 310396ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\前端学习\项目\vue-h5shopping\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 3528
+hostname: WINDOWS-9MNNE6M
+
+2021-07-12 11:07:50,502 ERROR 3528 nodejs.ClusterClientNoResponseError: client no response in 4829082ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\前端学习\项目\vue-h5shopping\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 3528
+hostname: WINDOWS-9MNNE6M
+
+2021-07-12 11:50:12,232 ERROR 4352 [-/127.0.0.1/-/12ms GET /v1/tobeEvaluated?page=0] nodejs.MongoError: Skip value must be non-negative, but received: -10
+    at Connection.<anonymous> (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongodb@3.6.8@mongodb\lib\core\connection\pool.js:451:61)
+    at Connection.emit (events.js:376:20)
+    at processMessage (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongodb@3.6.8@mongodb\lib\core\connection\connection.js:451:10)
+    at Socket.<anonymous> (E:\前端学习\项目\vue-h5shopping\server\node_modules\_mongodb@3.6.8@mongodb\lib\core\connection\connection.js:620:15)
+    at Socket.emit (events.js:376:20)
+    at addChunk (internal/streams/readable.js:309:12)
+    at readableAddChunk (internal/streams/readable.js:284:9)
+    at Socket.Readable.push (internal/streams/readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:188:23)
+ok: 0
+code: 2
+codeName: "BadValue"
+name: "MongoError"
+pid: 4352
+hostname: WINDOWS-9MNNE6M
+
+2021-07-14 08:38:58,005 ERROR 13848 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+errno: -4077
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 13848
+hostname: WINDOWS-9MNNE6M
+
+2021-07-15 08:29:08,082 ERROR 2180 nodejs.ClusterClientNoResponseError: client no response in 47575335ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (E:\前端学习\项目\vue-h5shopping\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:555:17)
+    at processTimers (internal/timers.js:498:7)
+name: "ClusterClientNoResponseError"
+pid: 2180
+hostname: WINDOWS-9MNNE6M
+

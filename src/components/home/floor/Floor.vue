@@ -11,24 +11,24 @@
       <!-- 上面三个 -->
       <div class="flex-j-between a-center">
         <div class=" hbfb" @click="goto(floor[0].goodsId)">
-          <img :src="floor[0].image" class="wbfb" />
+          <img v-lazy="floor[0].image" class="wbfb" />
         </div>
         <div>
           <div class="img_box" @click="goto(floor[1].goodsId)">
-            <img :src="floor[1].image" class="wbfb" />
+            <img v-lazy="floor[1].image" class="wbfb" />
           </div>
           <div class="img_box_nb img_box" @click="goto(floor[2].goodsId)">
-            <img :src="floor[2].image" class="wbfb" />
+            <img v-lazy="floor[2].image" class="wbfb" />
           </div>
         </div>
       </div>
       <!-- 下面两个 -->
       <div class="flex-j-between a-center hbfb">
         <div class="img_box hbfb img_box_t" @click="goto(floor[3].goodsId)">
-          <img :src="floor[3].image" class="wbfb" />
+          <img v-lazy="floor[3].image" class="wbfb" />
         </div>
         <div class="img_box img_box_t" @click="goto(floor[4].goodsId)">
-          <img :src="floor[4].image" class="wbfb" />
+          <img v-lazy="floor[4].image" class="wbfb" />
         </div>
       </div>
     </div>

@@ -84,7 +84,7 @@ import floor from "../components/home/floor/Floor";
 import hot from "../components/home/hot/Hot";
 import search from "../components/home/search/Search";
 export default {
-  name: "",
+  name: "home",
   props: {},
   data() {
     return {

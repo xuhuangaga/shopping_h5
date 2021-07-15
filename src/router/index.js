@@ -62,14 +62,6 @@ const routes = [
     }
   },
   {
-    path: '/buy',
-    name: 'Buy',
-    component: () => import('../views/buy/Buy.vue'),
-    meta: {
-      title: '立即购买'
-    }
-  },
-  {
     path: '/editinfo',
     name: 'EditInfo',
     component: () => import('../views/myinfo/EditInfo.vue'),
@@ -156,6 +148,14 @@ const routes = [
     meta: {
       title: '评价详情'
     }
+  },
+  {
+    path: '*',
+    name: 'Erro',
+    component: () => import('../views/erro/Erro.vue'),
+    meta: {
+      title: '404'
+    }
   }
 ]
 
@@ -164,27 +164,17 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 })
+//路由守卫
 router.beforeEach((to, from, next) => {
   document.title = to.meta.title
-  //以下页面必须登录才能进入
-  switch (to.path) {
-    case '/collection':
-    case '/orders':
-    case '/addresslist':
-    case '/history':
-    case '/pay':
-    case '/carts':
-      //判断是否登录
-      //判断是否登录 如果没有登录进入此页面 直接跳入首页
-      if (!JSON.parse(localStorage.getItem("h5_shopping_user"))) {
-        next('/')
-      } else {
-        next()
-      }
-      break;
-    default:
-      next()
-      break;
+  //必须登录才能进的页面 数组
+  let arr = ['/collection', '/orders', '/addresslist', '/history', '/pay', '/evaluatedetail', '/commentcenter', '/evaluate', '/addaddress', '/editaddress', '/editinfo']
+  if (arr.includes(to.path)) {
+    if (!JSON.parse(localStorage.getItem("h5_shopping_user"))) {
+      next('/')
+      return
+    }
   }
+  next()
 })
 export default router

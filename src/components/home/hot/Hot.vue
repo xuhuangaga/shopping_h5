@@ -5,7 +5,7 @@
     </div>
     <div class="flex-a-center hot_dv">
       <div v-for="(item, index) in hot" :key="index" class="hbfb pro_dv p-10">
-        <img :src="item.image" class="wbfb hbfb" @click="goto(item.goodsId)"/>
+        <img v-lazy="item.image" class="wbfb hbfb" @click="goto(item.goodsId)"/>
         <div class="pro_name p-l-r10" @click="goto(item.goodsId)">{{ item.name }}</div>
         <div class=" flex-j-center a-center m-t-b10">
           <div class="f-size16">￥{{ item.price }}</div>

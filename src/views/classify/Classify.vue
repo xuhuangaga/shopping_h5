@@ -30,7 +30,7 @@
               @click="goto(item1.id)"
             >
               <div class="img_dv p-10">
-                <img :src="item1.image" width="100" height="100" />
+                <img v-lazy="item1.image" width="100" height="100" />
               </div>
               <div class="p-l-r20">
                 <div class="floor_name m-b20">

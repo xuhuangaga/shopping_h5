@@ -40,8 +40,8 @@
             {{ item.name }}
           </div>
         </div>
-        <van-index-bar>
-          <template v-for="(value, key, index) in cityList">
+        <van-index-bar :index-list="Object.keys(cityList)">
+          <template v-for="(value, key, index) in cityList" class="p-20">
             <van-index-anchor :index="key" />
             <van-cell
               :title="item.name"
@@ -101,6 +101,7 @@ export default {
       } else {
         this.list = [];
         this.show = true;
+        //模糊搜索
         for (let i in this.cityList) {
           this.cityList[i].map(item => {
             if (

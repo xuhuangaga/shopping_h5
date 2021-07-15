@@ -1,22 +1,22 @@
 <template>
   <div class="bottom_dv">
     <van-tabbar v-model="active" route>
-      <van-tabbar-item url="/">
+      <van-tabbar-item to="/">
         <span>商城</span>
         <template #icon="props">
           <i class="iconfont icon-shouye"></i>
         </template>
       </van-tabbar-item>
-      <van-tabbar-item url="/classify">
+      <van-tabbar-item to="/classify">
         <span>分类</span>
         <template #icon="props">
           <i class="iconfont icon-fenlei"></i>
         </template>
       </van-tabbar-item>
-      <van-tabbar-item icon="shopping-cart" :badge="carNum" url="carts"
+      <van-tabbar-item icon="shopping-cart" :badge="carNum" to="/carts"
         >购物车</van-tabbar-item
       >
-      <van-tabbar-item icon="contact" url="myinfo">我的</van-tabbar-item>
+      <van-tabbar-item icon="contact" to="/myinfo">我的</van-tabbar-item>
     </van-tabbar>
   </div>
 </template>

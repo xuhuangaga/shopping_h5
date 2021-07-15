@@ -11,6 +11,7 @@ import {Toast,Dialog} from 'vant'
 import utils from './utils'
 import topslot from "./components/top/TopSlot";
 import loding from './components/loding/loding.vue'
+import lazyLoad from 'vue-lazyload'
 
 
 //把api挂载成全局变量
@@ -27,6 +28,12 @@ Vue.component('topslot',topslot)
 Vue.component('loding',loding)
 
 Vue.use(Vant)
+Vue.use(lazyLoad,{
+  preLoad:1,
+  error:require('./assets/images/error.jpg'),
+  loading:require('./assets/images/loding.gif'),
+  attempt:2
+})
 Vue.config.productionTip = false
 
 new Vue({

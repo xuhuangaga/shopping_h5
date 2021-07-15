@@ -3,7 +3,7 @@
     <div class="box bg-c-w  flex-j-around a-center">
       <div v-for="(item, index) in category" class="box_dv">
         <div @click="goto(item.bxMallSubDto[0].mallSubId, index)">
-          <img :src="item.image" class="wbfb hbfb" />
+          <img v-lazy="item.image" class="wbfb hbfb" />
         </div>
         <div
           class="f-size12 c_home_text"
@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="m-t20">
-      <img :src="advertesPicture" class="wbfb" />
+      <img v-lazy="advertesPicture" class="wbfb" />
     </div>
   </div>
 </template>

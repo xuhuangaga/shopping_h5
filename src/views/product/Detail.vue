@@ -41,7 +41,7 @@
     <!-- 详情和评论板块 -->
     <van-tabs v-model="active" style="margin-bottom:80px">
       <van-tab title="商品详情">
-        <div v-html="info.detail" class="m-t20"></div>
+        <div v-html="info.detail" class="m-t20" style="line-height:0px"></div>
       </van-tab>
       <van-tab title="商品评论" class="m-t20">
         <div v-if="comment.length === 0" class="t-a-center">

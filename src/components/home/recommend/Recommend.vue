@@ -12,7 +12,7 @@
           ref="pro_dv"
         >
           <img
-            :src="item.image"
+            v-lazy="item.image"
             width="120"
             height="120"
             @click="goto('/detail', item.goodsId)"
