@@ -26,7 +26,6 @@ export default {
   methods: {
     //返回上一页
     goBack() {
-      console.log(this.$route.path);
       switch (this.$route.path) {
         case "/addresslist":
           if (!Number(localStorage.getItem("addresslistItem"))) {
@@ -37,8 +36,11 @@ export default {
           break;
         case "/pay":
           if (Number(localStorage.getItem("idDirect"))) {
-            this.$router.back();
+            let pro = JSON.parse(localStorage.getItem('checked'))[0]
+            //直接购买进入的结算页 回到产品详情
+            this.$utils.goto("/detail",pro.id);
           } else {
+            //购物车进入的结算页 回到购物车页面
             this.$router.push("/carts");
           }
           break;

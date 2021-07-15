@@ -1,5 +1,5 @@
 <template>
-  <div class="c_home_text">
+  <div class="c_home_text shopping_cidty_dv">
     <topslot name="城市列表"></topslot>
     <div class="content hbfb content_box" :class="{ top_pom_box: show }">
       <div class="citys_dv">

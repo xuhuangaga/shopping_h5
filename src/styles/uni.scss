@@ -133,13 +133,23 @@ $backgroundf:#fff !important;
     position: fixed !important;
     top: 39px;
   }
+
   .van-tabs__nav {
     margin-left: -20px;
   }
 }
-.van-index-bar__sidebar {
-  padding-right: 10px;
-  .van-index-bar__index {
-    margin-bottom: 3px;
+
+.shopping_cidty_dv {
+  .van-index-bar__sidebar {
+    padding-right: 10px;
+
+    .van-index-bar__index {
+      margin-bottom: 3px;
+      font-size: 13px !important;
+    }
+  }
+
+  .van-index-anchor--sticky {
+    top: 42px !important;
   }
 }

@@ -17,7 +17,7 @@
       </div>
       <div @click="checkLoginGoto('/evaluate')">
         <div class=" t-a-center">
-          <van-badge :content="evaluate">
+          <van-badge :content="evaluate===0?'':evaluate">
             <i class="iconfont icon-pingjia"></i>
           </van-badge>
         </div>

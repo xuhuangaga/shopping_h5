@@ -75,7 +75,9 @@
             >
           </div>
           <div>
-            <van-button type="danger" class="wbfb fj" @click="changeFlag(false)">注册</van-button>
+            <van-button type="danger" class="wbfb fj" @click="changeFlag(false)"
+              >注册</van-button
+            >
           </div>
         </div>
       </van-form>
@@ -84,7 +86,7 @@
 </template>
 
 <script>
-import goback from '../../components/goback/GoBack';
+import goback from "../../components/goback/GoBack";
 export default {
   name: "",
   props: {},
@@ -106,7 +108,7 @@ export default {
     };
   },
   components: {
-    goback,
+    goback
   },
   methods: {
     //验证用户名
@@ -138,6 +140,7 @@ export default {
           .then(res => {
             // console.log(res);
             if (res.code === 200) {
+              this.getCartNum()
               //跳转到个人中心页面  并且存储数据
               this.$toast.success("登录成功");
               this.$store.commit("setUser", JSON.stringify(res.userInfo));
@@ -148,8 +151,8 @@ export default {
               );
               this.$router.push("/myinfo");
             } else {
-              if (res.msg==="验证码错误") {
-                this.data.verify=""
+              if (res.msg === "验证码错误") {
+                this.data.verify = "";
               }
               this.$toast.fail(res.msg);
             }
@@ -164,6 +167,7 @@ export default {
           .then(res => {
             // console.log(res);
             if (res.code === 200) {
+              this.getCartNum()
               this.$toast.success("注册成功");
               this.$store.commit("setUser", JSON.stringify(res.userInfo));
               //存储用户信息到localstorage
@@ -215,6 +219,23 @@ export default {
     //切换验证码
     changeCode() {
       this.getCode();
+    },
+    //更新当前登录用户的购物车数量
+    getCartNum() {
+      this.$api
+        .getCarsData()
+        .then(res => {
+          // console.log(res);
+          if (res.code === 200) {
+            //修改vuex里面的购物车数量
+            this.$store.commit("setCartsNum", res.shopList.length);
+            //修改localstorage里面的购物车数量
+            localStorage.setItem("carNum", res.shopList.length);
+          }
+        })
+        .catch(err => {
+          console.log(err);
+        });
     }
   },
   mounted() {
@@ -227,7 +248,6 @@ export default {
 
 <style lang='scss' scoped>
 .loginres_dv {
-  
   background: url("../../assets/images/login.jpg");
   min-height: 667px;
   .btn_dv {

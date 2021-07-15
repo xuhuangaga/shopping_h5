@@ -29,8 +29,8 @@
         </div>
       </div>
       <div class="content_bottom">
-       <myTop></myTop>
-       <myBottom></myBottom>
+        <myTop></myTop>
+        <myBottom></myBottom>
       </div>
     </div>
     <bottom></bottom>
@@ -38,14 +38,13 @@
 </template>
 
 <script>
-import myTop from '../../components/myinfo/top/Top';
-import myBottom from '../../components/myinfo/bottom/Bottom';
+import myTop from "../../components/myinfo/top/Top";
+import myBottom from "../../components/myinfo/bottom/Bottom";
 export default {
   name: "",
   props: {},
   data() {
-    return {
-    };
+    return {};
   },
   components: {
     myTop,
@@ -61,21 +60,31 @@ export default {
     },
     //退出登录  删除vuex数据 跳转到登录页
     signOut() {
-      this.$api
-        .loginOut()
-        .then(res => {
-          // console.log(res);
-          this.$store.commit("setUser", null);
-          localStorage.removeItem("h5_shopping_user");
-          this.$router.push("/loginres");
+      this.$dialog
+        .confirm({
+          title: "提示",
+          message: "确认退出登录?",
+          confirmButtonColor: "#439ffb"
         })
-        .catch(err => {
-          console.log(err);
+        .then(() => {
+          this.$api
+            .loginOut()
+            .then(res => {
+              // console.log(res);
+              this.$store.commit("setUser", null);
+              localStorage.removeItem("h5_shopping_user");
+              this.$router.push("/loginres");
+            })
+            .catch(err => {
+              console.log(err);
+            });
+        })
+        .catch(() => {
+          // on cancel
         });
-    },
+    }
   },
-  mounted() {
-  },
+  mounted() {},
   computed: {
     //用户信息
     user() {

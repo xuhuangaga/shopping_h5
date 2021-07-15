@@ -37,19 +37,20 @@ export default {
       if (url != this.$route.path) {
         this.$utils.goto(url, id);
       }
-    },
+    }
   },
   mounted() {},
   computed: {
     carNum() {
-      let count = 0;
+      let count = "";
       //未登录清空下 购物车数量是0
       if (this.$store.state.user) {
-        this.$store.state.carNum
-          ? (count = this.$store.state.carNum)
-          : (count = 0);
-      } else {
-        count = "";
+        console.log(this.$store.state.carNum );
+        if (this.$store.state.carNum) {
+          this.$store.state.carNum !== 0
+            ? (count = this.$store.state.carNum)
+            : (count = "");
+        }
       }
       return count;
     }

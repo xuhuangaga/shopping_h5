@@ -133,7 +133,7 @@ export default {
             this.$api
               .deleteShop(cid)
               .then(res => {
-                console.log(res);
+                // console.log(res);
                 if (res.code === 200) {
                   this.$toast.success(res.msg);
                   this.$emit("del", "");
